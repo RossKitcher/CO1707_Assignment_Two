@@ -50,7 +50,7 @@ createFlexChild = (title, filepath, alternateText, isFirst, desc, price, isTshir
     srcAtt.value = filepath;
     altAtt.value = alternateText;
     bOnclickAtt.value = "handleBuy(this)";
-    hrefAtt.value = "item.html";
+    hrefAtt.value = "item.php";
     aOnclickAtt.value = "handleReadmore(this)";
 
     // Create text nodes to the tags featuring text.
