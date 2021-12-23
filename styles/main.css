@@ -1,0 +1,804 @@
+/* Declare global variables for the colour palette. */
+:root {
+    --red: #be1622;
+    --blue: #007fb0;
+    --grey: #34516C;
+    --forest: #006250;
+    --sunrise: #f47721;
+    --lake: #0099d2;
+    --slate: #577a9b;
+    --grass: #339933;
+    --gold: #f2be1a;
+    --sky: #53b7e8;
+    --silver: #919cad;
+    --olive: #9bcb4e;
+    --light-sky: #a4d3f2;
+    --cloud: #c7cbda;
+}  
+
+/* Set global styles */
+body {
+    font-family: sans-serif, serif;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+/* ==================== Header Styles ==================== */
+
+/* Primary Navigation Styles */
+
+.nav {
+    background-color: var(--red);
+    display: block;
+
+    /* Set position and z-index to allow the navigation to display over the "Top" button on products.html. */
+    position: relative;
+    z-index: 1;
+}
+
+.logo {
+    /* Set height and width of the logo */
+    height: 140px;
+    width: auto;
+}
+
+.nav-header {
+    color: white;
+    display: inline-block; /* Inline-block is used to allow the margin to be changed. */
+    font-size: 2rem;
+    margin: 3rem 0 0 0; /* Center the header */
+    text-shadow: 1px 1px 4px black; /* Emphasise the title using a small shadow */
+    vertical-align: top;
+}
+
+.nav-links {
+    display: inline; /* Display content on the same line. */
+    list-style-type: none; /* Remove default bullet points. */
+}
+
+.nav-link {
+    float: right; /* Push to the right of the navbar. */
+}
+
+.nav-link a {
+    color: white;
+    display: block;
+    font-weight: 500;
+    margin-top: 2.6rem; /* Center the links inside the navbar */
+    padding: 1rem;
+    text-decoration: none; /* Remove default text decoration for hyperlinks. */
+    transition: .3s; /* Adds a transition to the :hover effect to give a smoother look. */
+}
+
+.nav-link a:hover, .nav-link .active {
+    background-color: #9e111b; /* Change background color slightly when this element is hovered by the mouse. */
+}
+
+/* Secondary Navigation Styles */
+
+.burger-icon {
+    display: none; /* Hide the burger icon by default */
+}
+
+.burger-nav {
+    display: block;
+    height: 0; /* Set height to zero so transition duration can be applied. */
+    transition: .1s;
+}
+
+.burger-links {
+    display: none;
+}
+
+.show .burger-nav {
+    background-color: var(--grey);
+    height: 60px;
+    transition: .1s;
+}
+
+.show .burger-links {
+    display: inline-block;
+    list-style-type: none;
+}
+
+.show .burger-link {
+    float: left;
+    margin-top: .3rem;
+}
+
+.show .burger-link a {
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.show .burger-link a:hover, .show .burger-link .active {
+    background-color: #2b4359; 
+}
+
+/* Rotate first bar of burger icon */
+.animate .bar1 {
+    height: 5px;
+    margin: 6px 0;
+
+    /* Rotate the first bar to form one half the 'X' character. */
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+/* Fade out the second bar */
+.animate .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.animate .bar3 {
+    height: 5px;
+
+    /* Rotate the third bar to form the last half the 'X' character. */
+    transform: rotate(45deg) translate(-7px, -8px) ;
+}
+
+
+
+/* ==================== Page Content Styles ==================== */
+.content {
+    margin: 1rem auto; /* Automatically center the content using left/right margins */
+    width: 55rem;
+}
+
+.content h1 {
+    color: var(--grey);
+    font-size: 2.4rem;
+}
+
+.content h2 {
+    color: var(--gold);
+    font-size: 1.8rem;
+}
+
+.content p {
+    margin: .6rem 0;
+}
+
+/* Set width and height for iFrame embedded YouTube video. */
+.youtube-video {
+    height: 25rem;
+    width: inherit;
+}
+
+/* ==================== Footer Styles ==================== */
+
+/* The following three classes are used to keep the footer always visible and always on the bottom of the screen. */
+/* Source: https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/ */
+.page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+.content-wrap {
+    padding-bottom: 18rem;
+}
+
+.stay-bottom {
+    bottom: 0;
+    height: 18rem;
+    position: absolute;
+    width: 100%;
+}
+
+/* Flexbox is used to evenly display and wrap multiple columns in the footer. */
+/* Flexbox parent */
+.footer {
+    align-items: flex-start; /* Align children to the top */
+    background-color: var(--grey);
+    display: flex; /* Enable flexbox. */
+    flex-flow: row wrap; /* Shorthand to order from left to right in a row and enable wrapping. */
+    justify-content: center; /* Center all children */
+}
+
+/* Flexbox child */ 
+.footer-child {
+    color: white;
+    flex-grow: 1;
+    margin: 1rem;
+}
+
+/* Change color of line break */
+.dark {
+    background-color: white;
+    color: white;
+}
+
+/* ==================== Products Styles ==================== */
+
+/* Style the same-page navigation. */
+.products-page ul {
+    display: block;
+    margin: 0;
+}
+
+.products-page ul li {
+    display: inline-block;    
+}
+
+.products-page ul li a {
+    display: block;
+    margin: .5rem 0;
+    padding: .5rem 1rem;
+    transition: .3s;
+}
+
+.products-page ul li a:hover {
+    background-color: var(--slate);
+    color: white;
+}
+
+/* Style the 'top' button container that will take the user to the top of the page. */
+.sticky-top-button {
+    background-color: var(--grey);
+    padding: 1rem 0;
+    position: fixed; 
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+/* Style the actual 'top' button. */
+.sticky-top-button a {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    padding: 1rem 10rem;
+    text-decoration: none;
+    transition: .3s;
+}
+
+/* Change the 'top' button's background color when it is hovered by the user. */
+.sticky-top-button a:hover {
+    background-color: #2b4359;
+}
+
+/* Style the FlexBox parent. */
+.products-parent {
+    align-items: flex-start; /* Align a row from the top of each child. */
+    display: flex;
+    flex-flow: row wrap; /* Display children from left to right and wrap children to fit screen width. */
+    gap: 1rem; /* Add a 'gap' in-between each child. */
+    justify-content: space-evenly; /* Display children evenly. */
+    margin: 1rem 4rem;
+}
+
+/* Style the FlexBox children. */
+.products-child {
+    border-radius: 4px;
+    box-shadow: 0 0 8px var(--slate); /* Add a small shadow to add emphasis to a product. */
+    flex-basis: 25rem; /* Set default size of element. */
+    flex-grow: 0; /* Keep a consistent width if screen is resized. */
+}
+
+/* Style a product's display image. */
+.products-child img {
+    display: block;
+    height: 20rem;
+    margin: 0 auto;
+    width: 20rem;
+}
+
+/* Style a product's title. */
+.product-desc h3 {
+    color: var(--gold);
+    font-size: 2rem;
+    text-shadow: 0 0 3px black;
+}
+
+/* Style a product's description container. */
+.product-desc {
+    background-color: var(--slate);
+    padding: 1rem;
+}
+
+/* Style a product's textual description. */
+.product-desc p {
+    color: white;
+}
+
+/* Style a product's price. */
+.price {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+/* Style a product's 'Add to cart' button. */
+.button {
+    background-color: var(--gold);
+    border: none; /* Remove the default <button> styling. */
+    border-radius: 5px; /* Round the edges of the element. */
+    color: black;
+    cursor: pointer; /* Set the cursor's state when it hovers this button. */
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: .05rem;
+    margin: 0 auto;    
+    padding: .5rem 3rem;
+    text-decoration: none;
+    transition: .3s; /* Add transition timer for when :hover is triggered. */
+}
+
+/* When the button is hovered by the cursor. */
+.button:hover {
+    background-color: #bd9413;
+    padding: .6rem 3.5rem;
+}
+
+/* Slightly different width value for tshirts due to image dimensions no longer being a square. */
+.products-child .tshirt {
+    width: 16rem;
+}
+
+/* ==================== Shopping Cart Styles ==================== */
+
+/* Set width and automatic horizontal margin for the main container. */
+.cart-content {
+    display: block;
+    margin: 1rem auto;
+    width: 70%;
+}
+
+.cart-content h1 {
+    color: var(--gold);
+    font-size: 2.4rem;
+}
+
+/* Style the flexbox parent. */
+.cart-parent {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+}
+
+/* Style the flexbox children */
+.cart-child {
+    background-color: var(--cloud);
+    box-shadow: 0 0 10px var(--cloud);
+    height: 18rem;
+}
+
+.cart-title {
+    background-color: var(--slate);
+    height: 4rem;
+}
+
+.cart-child h3 {
+    color: white;
+    display: inline-block;  
+    font-size: 1.6rem;  
+    margin: 0;
+    padding: 1rem;
+}
+
+.cart-desc {
+    display: inline-block;
+    font-size: 1.4rem;
+    padding: 0 1rem;
+    vertical-align: top;
+}
+
+.cart-child img {
+    display: inline-block;
+    height: 14rem;
+    width: 14rem;
+}
+
+.cart-remove {
+    display: inline-block;
+    width: 10%;
+}
+
+.cart-empty p {
+    color: var(--grey);
+    line-height: 14rem; /* Center vertically */
+    margin: 0;
+    text-align: center; /* Center horizontally */
+}
+
+/* Class for a divider on a light background. */
+.light {
+    background-color: var(--slate);
+    color: var(--slate);
+}
+
+.subtotal {
+    display: block;
+    font-weight: 700;
+    text-align: right;
+}
+
+/* Style the remove buttons by deleting default styling and adding my own. */
+.remove-button {
+    background-color: var(--red);
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: block;
+    float: right;
+    min-width: 6rem;
+    padding: 1.5rem 1rem;
+    text-decoration: none;
+    transition: .3s;
+    width: 10%;
+}
+
+.remove-button:hover {
+    font-weight: 700;
+    width: 20%;
+}
+
+.remove-all {
+    background-color: var(--red);
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: block;
+    margin: 1rem 0;
+    padding: .8rem;
+    transition: .3s;
+    width: 100%;
+}
+
+.remove-all:hover {
+    font-weight: 700;
+    padding: 1.2rem .8rem;
+}
+
+/* Class to hide an element. */
+.hidden {
+    display: none;
+}
+
+/* ==================== View Item Styles ==================== */
+
+.item-container {
+    border-radius: 4px;
+    box-shadow: 0 0 5px var(--slate);
+    display: block;
+    margin: 1rem auto;
+    width: 50rem;
+}
+
+.item-container img {
+    display: block;
+    margin: 0 auto;
+    width: 40rem;
+}
+
+.item-desc {
+    background-color: var(--slate);
+    color: white;
+    padding: 1rem;
+}
+
+.item-desc h3 {
+    color: var(--gold);
+    font-size: 2rem;
+}
+
+
+/* Styles for screen sizes less than 1080px and more than 800px (laptops) */
+@media only screen and (max-width: 1080px) {
+    .content {
+        width: 45rem;
+    }
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content h2 {
+        font-size: 1.7rem;
+    }
+
+    .item-container {
+        width: 45rem;
+    }
+
+    .item-container img {
+        width: 35rem;
+    }
+}
+
+/* Styles for screen sizes less than 800px and more than 500px (tablets, horizontal smart phone) */
+@media only screen and (max-width: 800px) {
+    
+    /* Hide primary navigation */
+    .nav-links {
+        display: none;
+    }
+
+    /* Position the burger icon */
+    .burger-icon {
+        cursor: pointer;
+        display: inline;
+        float: right;
+        margin-right: 1rem;
+        margin-top: 3rem;
+        padding: .3rem .5rem;
+        transition: .3s;
+    }
+
+    .burger-icon:hover {
+        background-color: #9e111b;
+    }
+
+    /* Display the burger icon */
+    .bar1, .bar2, .bar3 {
+        background-color: white;
+        height: .2rem;
+        margin: .3rem 0;
+        transition: .4s;     
+        width: 1.8rem;
+    }
+
+    .logo {
+        height: 120px;
+    }
+
+    .nav-header {
+        font-size: 1.5rem;
+    }
+
+    .content {
+        width: 30rem;
+    }
+
+    .content h1 {
+        font-size: 1.6rem;
+    }
+
+    .content h2 {
+        font-size: 1.4rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+        margin: .4rem 0;
+    }
+
+    .youtube-video {
+        height: 17rem;
+    }
+
+    .item-container {
+        width: 30rem;
+    }
+
+    .item-container img {
+        width: 25rem;
+    }
+
+    .cart-content {
+        width: 90%;
+    }
+
+    .content-wrap {
+        padding-bottom: 30rem;
+    }
+
+    .stay-bottom {
+        height: 30rem;
+    }
+}
+/* Styles for screen sizes less than 500px (smartphones) */
+@media only screen and (max-width: 500px) {
+
+    .logo {
+        height: 100px;
+    }
+
+    .nav-header {
+        font-size: 1.3rem;
+    }
+
+    .burger-icon {
+        margin-top: 2.4rem;
+    }
+
+    .content {
+        width: 24rem;
+    }
+
+    .content h1 {
+        font-size: 1.3rem;
+    }
+
+    .content h2 {
+        font-size: 1.2rem;
+    }
+
+    .content p {
+        font-size: 0.9rem;
+        margin: .3rem 0;
+    }
+
+    .youtube-video {
+        height: 13rem;
+    }
+
+    .item-container {
+        width: 20rem;
+    }
+
+    .item-container img {
+        width: 15rem;
+    }
+
+    .item-desc h3 {
+        font-size: 1.4rem;
+    }
+    .item-desc p {
+        font-size: .8rem;
+    }
+
+    .item-desc button {
+        font-size: .9rem;
+    }
+}
+
+/* Exact media query for when the footer flex box wraps to one child per row, ensuring the footer is always visible. */
+@media only screen and (max-width: 418px) {
+
+    .content-wrap {
+        padding-bottom: 45rem;
+    }
+    
+    .stay-bottom {
+        height: 45rem;
+    }
+}
+
+/* Styles for screen sizes less than 400px. */
+@media only screen and (max-width: 400px) {
+    .logo {
+        height: 70px;
+    }
+
+    .nav-header {
+        font-size: 1.2rem;
+        margin-top: 1.5rem;
+    }
+    .burger-icon {
+        margin-top: 1rem;
+    }
+
+    .content {
+        width: 20rem;
+    }
+
+    .products-page ul {
+        font-size: .8rem;
+    }
+
+    .products-child img {
+        height: 18rem;
+        width: 18rem;
+    }
+
+    .product-desc h3 {
+        font-size: 1.5rem;
+    }
+
+    .sticky-top-button a {
+        font-size: 1rem;
+        padding: 1rem 5rem;
+    }
+
+    .item-container {
+        width: 17rem;
+    }
+
+    .cart-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .cart-child {
+        height: fit-content;
+    }
+
+    .cart-child img {
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+
+    .cart-desc {
+        display: block;
+    }
+
+    .price {
+        text-align: center;
+    }
+
+    .remove-button {
+        display: block;
+        min-width: 100%;
+        padding: .5rem ;
+    }
+
+    .remove-button:hover {
+        background-color: #9e111b;
+    }
+}
+
+/* Styles for screen sizes less than 340px. */
+@media only screen and (max-width: 340px) {
+
+    .logo {
+        height: 60px;
+    }
+
+    .nav-header {
+        font-size: 1rem;
+    }
+
+    .burger-icon {
+        margin-top: .85rem;
+    }
+
+    .content {
+        width: 17rem;
+    }
+
+    .youtube-video {
+        height: 10rem;
+    }
+    
+    .products-page ul {
+        font-size: .7rem;
+        padding-left: 1rem;
+    }
+
+    .products-child img {
+        width: 16rem;
+        height: 16rem;
+    }
+
+    .cart-empty p {
+        font-size: .85rem;
+    }
+}
+
+/* Styles for screen sizes less than 290px. */
+@media only screen and (max-width: 290px) {
+
+    .logo {
+        height: 50px;
+    }
+
+    .nav-header {
+        font-size: .9rem;
+        margin-top: 1.3rem;
+    }
+
+    .burger-icon {
+        margin-top: .5rem;
+    }
+
+    .burger-links {
+        padding-left: 1rem;
+    }
+    
+    .content {
+        width: 15rem;
+    }
+
+    .products-page ul li a{
+        padding: .5rem .8rem;
+    }
+
+    .item-container {
+        width: 15rem;
+    }
+}

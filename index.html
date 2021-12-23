@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+    <head>
+        <!-- Set metadata to give the web browser information about the webpage. -->
+        <meta charset="UTF-8">
+        <meta name="description" content="Uclan's Student Union Shop Homepage.">
+        <meta name="keywords" content="UCLAN, Student Union, Shop">
+        <meta name="author" content="Ross Kitcher">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Set title. -->
+        <title>Student Shop Homepage</title>
+
+        <!-- Import stylesheets. -->
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+    <body onresize="handleMenuResize()">
+        <div class="page-container">
+            <div class="content-wrap">
+
+                <!-- ==================== Navigation ==================== -->
+                <header class="nav">
+                    <nav>
+                        <img class="logo" src="resources/uclan-logo.png" alt="UClan logo.">
+                        <h1 class="nav-header">Student Shop</h1>
+
+                        <!-- Primary navigation that is displayed by default. -->
+                        <ul class="nav-links">
+                            <li class="nav-link"><a href="cart.html">Cart</a></li>
+                            <li class="nav-link"><a href="products.html">Products</a></li>
+                            <li class="nav-link"><a href="index.html" class="active">Home</a></li>
+                        </ul>
+
+                        <!-- Create a burger icon using CSS, source: https://www.w3schools.com/howto/howto_css_menu_icon.asp -->
+                        <div class="burger-icon" onclick="animateBurger(this)">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                        </div>
+                    </nav>
+
+                    <!-- Secondary navigation that is displayed when the burger icon is clicked.-->
+                    <div id="burgerNavigation">
+                        <div class="burger-nav">
+                            <ul class="burger-links">
+                                <li class="burger-link"><a href="index.html" class="active">Home</a></li>
+                                <li class="burger-link"><a href="products.html">Products</a></li>
+                                <li class="burger-link"><a href="cart.html">Cart</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- ==================== Page Content ==================== -->
+                <div class="content">
+                    <h1>Where opportunity creates success</h1>
+                    <p>Every student at The University of Central Lancashire is automatically a member of the Students' Union.</p>
+                    <p>We're here to make life better for students - inspiring you to succeed and achieve your goals.</p>
+                    <br />
+                    <p>Everything you need to know about UCLan Students' Union. Your membership starts here.</p>
+                    <h2>Together</h2>
+
+                    <!-- HTML5 Video -->
+                    <video class="youtube-video" controls>
+                        <source src="resources/uclan-together.mp4" type="video/mp4"/>
+                        Sorry, your browser does not support the video tag.
+                    </video>
+
+                    <h2>Join our global community</h2>
+
+                    <!-- Iframe Video -->
+                    <iframe class="youtube-video" src="https://www.youtube.com/embed/i2CRunZv9CU"></iframe>
+                </div>
+
+                <!-- ==================== Footer ==================== -->
+                <!-- Flexbox parent container -->
+                <footer class="footer stay-bottom">
+
+                    <!-- Flexbox child element-->
+                    <div class="footer-child">
+                        <h3>Links</h3>
+                        <hr class="dark" /> <!-- Line break -->
+                        <p><a href="https://www.uclansu.co.uk/" target="_blank">Students' Union</a></p>
+                    </div>
+
+                    <!-- Flexbox child element-->
+                    <div class="footer-child">
+                        <h3>Contact</h3>
+                        <hr class="dark" />
+                        <p>Email: suinformation@uclan.ac.uk</p>
+                        <p>Phone: 01772 89 3000</p>
+                    </div>
+
+                    <!-- Flexbox child element-->
+                    <div class="footer-child">
+                        <h3>Location</h3>
+                        <hr class="dark" />
+                        <p>University of Central Lancashire Students' Union.</p>
+                        <p>Fylde Road, Preston. PR1 7BY</p>
+                        <p>Registered in England</p>
+                        <p>Company Number: 7623917</p>
+                        <p>Registered Charity Number: 1142616</p>
+                    </div>
+                </footer>
+                
+            </div>
+        </div>
+
+
+        <!-- Import JavaScript. -->
+        <script src="js/main.js"></script>
+    </body>
+</html>

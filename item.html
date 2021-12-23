@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+    <head>
+        <!-- Set metadata to give the web browser information about the webpage. -->
+        <meta charset="UTF-8">
+        <meta name="description" content="Uclan's Student Union Product View.">
+        <meta name="keywords" content="UCLAN, Student Union, Shop">
+        <meta name="author" content="Ross Kitcher">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Set title. -->
+        <title>View Item</title>
+
+        <!-- Import stylesheets. -->
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+    <body onresize="handleMenuResize()">
+
+        <div class="page-container">
+            <div class="content-wrap">
+
+                <!-- ==================== Navigation ==================== -->
+                <header class="nav">
+                    <nav>
+                        <img class="logo" src="resources/uclan-logo.png" alt="UClan logo.">
+                        <h1 class="nav-header">Student Shop</h1>
+
+                        <!-- Primary navigation that is displayed by default. -->
+                        <ul class="nav-links">
+                            <li class="nav-link"><a href="cart.html">Cart</a></li>
+                            <li class="nav-link"><a href="products.html">Products</a></li>
+                            <li class="nav-link"><a href="index.html">Home</a></li>
+                        </ul>
+
+                        <!-- Create a burger icon using CSS, source: https://www.w3schools.com/howto/howto_css_menu_icon.asp -->
+                        <div class="burger-icon" onclick="animateBurger(this)">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                        </div>
+                    </nav>
+
+                    <!-- Secondary navigation that is displayed when the burger icon is clicked.-->
+                    <div id="burgerNavigation">
+                        <div class="burger-nav">
+                            <ul class="burger-links">
+                                <li class="burger-link"><a href="index.html">Home</a></li>
+                                <li class="burger-link"><a href="products.html">Products</a></li>
+                                <li class="burger-link"><a href="cart.html">Cart</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- ==================== Page Content ==================== -->
+                <div class="item-container">
+
+                    <!-- item contents are displayed using generate-item.js -->
+
+                </div>
+
+                <!-- ==================== Footer ==================== -->
+                <!-- Flexbox parent container -->
+                <footer class="footer stay-bottom">
+
+                    <!-- Flexbox child element-->
+                    <div class="footer-child">
+                        <h3>Links</h3>
+                        <hr class="dark" /> <!-- Line break -->
+                        <p><a href="https://www.uclansu.co.uk/" target="_blank">Students' Union</a></p>
+                    </div>
+
+                    <!-- Flexbox child element-->
+                    <div class="footer-child">
+                        <h3>Contact</h3>
+                        <hr class="dark" />
+                        <p>Email: suinformation@uclan.ac.uk</p>
+                        <p>Phone: 01772 89 3000</p>
+                    </div>
+
+                    <!-- Flexbox child element-->
+                    <div class="footer-child">
+                        <h3>Location</h3>
+                        <hr class="dark" />
+                        <p>University of Central Lancashire Students' Union.</p>
+                        <p>Fylde Road, Preston. PR1 7BY</p>
+                        <p>Registered in England</p>
+                        <p>Company Number: 7623917</p>
+                        <p>Registered Charity Number: 1142616</p>
+                    </div>
+                </footer>
+                
+            </div>
+        </div>
+
+        <!-- Import JavaScript. -->
+        <script src="js/main.js"></script>
+        <script src="js/generate-item.js"></script>
+    </body>
+</html>
