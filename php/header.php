@@ -2,13 +2,18 @@
 
     // Function to determine if the given page is the 'active' one.
     function isActive($page) {
+
         $url = $_SERVER['REQUEST_URI'];
         $url = substr($url, 1);
 
         if ($page == $url) {
+
             return true;
+
         } else {
+
             return false;
+
         }
     }
 
@@ -47,7 +52,7 @@
         } elseif ($linkType == "burger-link") {
 
             // Create links in desc order.
-            for ($i = count($pageNames) - 1; $i == 0; $i--) {
+            for ($i = count($pageNames) - 1; $i >= 0; $i--) {
 
                 echoLink($linkType, $urlNames[$i], $pageNames[$i]);
 
