@@ -36,8 +36,8 @@
     // Function to handle the creation of all navigation links.
     function createLinks($linkType) {        
 
-        $pageNames = ["Cart", "Products", "Home"];
-        $urlNames = ["cart.php", "products.php", "index.php"];        
+        $pageNames = ["Register", "Cart", "Products", "Home"];
+        $urlNames = ["register.php", "cart.php", "products.php", "index.php"];        
 
         // If the type of link is a part of a burger menu or the main header.
         if ($linkType == "nav-link") {

@@ -487,6 +487,86 @@ body {
     font-size: 2rem;
 }
 
+/* ==================== Register Styles ==================== */
+
+.register {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.register input, .register textarea {
+    border: .5px solid var(--cloud);
+    box-sizing: border-box;
+    display: block;
+    font-family: sans-serif, serif; /* Overrides default font styling of the textarea tag. */
+    margin-bottom: 1rem;
+    padding: 1rem;
+    resize: none;
+    transition: .3s;
+    width: 100%;
+}
+
+.register input[type=submit] {
+    background-color: var(--lake);
+    border: none;
+    border-radius: 0;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: .5rem;
+    transition: .3s;
+    width: 100%;
+}
+
+.register input[type=submit]:hover {
+    padding: 1rem 1rem;
+}
+
+.register label {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.register input:hover, .register textarea:hover, :focus-visible {
+    box-shadow: 0 0 10px var(--slate);
+    outline: none;
+}
+
+.success {
+    background-color: #abffca;
+}
+
+.failure {
+    background-color: white;
+}
+
+.hint {
+    background-color: #fc7784;
+    color: black;
+    height: 0;
+    margin-bottom: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+    transition: opacity .3s;
+}
+
+.hint p {
+    margin: 0;
+    padding: .3rem;
+}
+
+.hint i {
+    margin-right: .5rem;
+}
+
+.reveal {
+    height: auto;
+    margin-bottom: 1rem;
+    opacity: 1;
+    padding: 1rem;
+}
 
 /* Styles for screen sizes less than 1080px and more than 800px (laptops) */
 @media only screen and (max-width: 1080px) {
