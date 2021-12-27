@@ -37,7 +37,14 @@
     function createLinks($linkType) {        
 
         $pageNames = ["Register", "Cart", "Products", "Home"];
-        $urlNames = ["register.php", "cart.php", "products.php", "index.php"];        
+        $urlNames = ["register.php", "cart.php", "products.php", "index.php"];
+        
+        session_start();
+
+        if (isset($_SESSION["name"])) {
+            $pageNames[0] = "Logout";
+            $urlNames[0] = "register.php?logout=logout";
+        }
 
         // If the type of link is a part of a burger menu or the main header.
         if ($linkType == "nav-link") {

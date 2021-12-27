@@ -31,10 +31,31 @@
                     <!-- Check for possible GET variables. -->
                     <?php
 
+                        // If the user has just logged out.
+                        if (isset($_GET["logout"])) {
+                            if ($_GET["logout"] == "logout") {
+
+                                echo '<div class="action-success"><p>You have been logged out.</p></div>';
+
+                                // Destroy the user's current session to log them out.
+                                session_unset();
+                                session_destroy();
+
+                                // Refresh current page to change the header navigation from 'Logout' to 'Register'.
+                                // Get variable value changed to 'true' to avoid infinite browser refreshing yet keeping the logged out message.
+                                header("Location: register.php?logout=true");
+
+                            } else if ($_GET["logout"] == "true") {
+
+                                echo '<div class="action-success"><p>You have been logged out.</p></div>';
+
+                            }
+                        }
+
                         // If the user has just successfully registered.
                         if (isset($_GET['register'])) {
                             if ($_GET['register'] == 'success') {
-                                echo '<div class="register-success"><p>You are now registered!</p></div>';
+                                echo '<div class="action-success"><p>You are now registered!</p></div>';
                             }
                         }
 
@@ -89,7 +110,7 @@
                     <!-- Form for registration -->
                     <!-- All containers with class 'hint' are programatically shown/occulted using register-validation.js -->
                     <!-- On submission, a POST request is sent to php/register.inc.php -->
-                    <form action="php/register.inc.php" method="post" class="register">
+                    <form action="php/register.inc.php" method="post" class="input-form">
 
                         <label for ="fullName">Full name:</label>
                         <input type="text" id="fullName" name="fullName" placeholder="Enter full name">

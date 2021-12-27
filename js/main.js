@@ -37,10 +37,16 @@ handleBuy = (element) => {
     let price = descContainer.getElementsByTagName("p")[1].innerHTML;
     let imgFilepath = divContainer.getElementsByTagName("img")[0].getAttribute("src");
 
-    // Seperate the product name and the colour from the title.
-    let titleSplit = fullname.split(" - ");
-    prodName = titleSplit[0];
-    prodColour = titleSplit[1];
+    // Seperate the product name and the colour from the title.    
+    if (fullname.includes("Hoodie")) {
+        prodName = "UCLan Hoodie";
+    } else if (fullname.includes("Tshirt")) {
+        prodName = "UCLan Logo Tshirt";
+    } else if (fullname.includes("Jumper")) {
+        prodName = "UCLan Logo Jumper";
+    }
+
+    prodColour = fullname.slice(0, fullname.length-prodName.length);
 
     // Loop through each item in localStorage to determine the max ID currently present.
     // This is to ensure all keys in localStorage are unique.
@@ -59,3 +65,17 @@ handleBuy = (element) => {
     alert(prodName + " added to cart!");
 }
 
+// Function to handle when the 'Read more...' link is clicked.
+handleReadmore = (element) => {
+
+    // Extract data from the product in question by navigating upwards on the DOM.
+    let descContainer = element.parentElement.parentElement;
+    let divContainer = descContainer.parentElement;
+    let fullname = descContainer.getElementsByTagName("h3")[0].innerHTML;
+    let desc = descContainer.getElementsByTagName("p")[0].innerHTML.split("<a")[0];
+    let price = descContainer.getElementsByTagName("p")[1].innerHTML;
+    let imgFilepath = divContainer.getElementsByTagName("img")[0].getAttribute("src");
+
+    sessionStorage.removeItem("product"); // Remove any previously set data.
+    sessionStorage.setItem("product", fullname + "," + price + "," + imgFilepath + "," + desc); // Add the product-specific data to the sessionStorage.
+}

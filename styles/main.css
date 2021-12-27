@@ -512,15 +512,15 @@ body {
     font-size: 2rem;
 }
 
-/* ==================== Register Styles ==================== */
+/* ==================== Register/Login Styles ==================== */
 
-.register {
+.input-form {
     margin-top: 1rem;
     width: 100%;
 }
 
 /* Style form input boxes */
-.register input, .register textarea {
+.input-form input, .input-form textarea {
     border: .5px solid var(--cloud);
     box-sizing: border-box;
     display: block;
@@ -533,7 +533,7 @@ body {
 }
 
 /* Style the Submit button. */
-.register input[type=submit] {
+.input-form input[type=submit] {
     background-color: var(--lake);
     border: none;
     border-radius: 0;
@@ -547,24 +547,24 @@ body {
 }
 
 /* When the Submit button is hovered. */
-.register input[type=submit]:hover {
+.input-form input[type=submit]:hover {
     padding: 1rem 1rem;
 }
 
 /* When the Submit button is disabled. */
-.register input[type=submit]:disabled {
+.input-form input[type=submit]:disabled {
     background-color: #fc7784;
     color: black;
     cursor: not-allowed;
 }
 
-.register label {
+.input-form label {
     display: block;
     margin-bottom: .5rem;
 }
 
 /* When form input boxes are hovered. */
-.register input:hover, .register textarea:hover, :focus-visible {
+.input-form input:hover, .input-form textarea:hover, :focus-visible {
     box-shadow: 0 0 10px var(--slate);
     outline: none;
 }
@@ -605,13 +605,17 @@ body {
     padding: 1rem;
 }
 
-.register-success {
+.action-success {
     background-color: #abffca;
     box-sizing: border-box;
     font-weight: 700;
     padding: 1rem;
     text-align: center;
     width: 100%;
+}
+
+.strong {
+    font-weight: 700;
 }
 
 /* Styles for screen sizes less than 1080px and more than 800px (laptops) */

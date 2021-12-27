@@ -13,6 +13,9 @@
 
         <!-- Import stylesheets. -->
         <link rel="stylesheet" href="styles/main.css">
+
+        <!-- Import kit from https://fontawesome.com/ to allow the use of symbols. -->
+        <script src="https://kit.fontawesome.com/8b3dff7f8c.js" crossorigin="anonymous"></script>
     </head>
     <body onresize="handleMenuResize()">
 
@@ -25,6 +28,55 @@
 
                 <!-- ==================== Page Content ==================== -->
                 <div class="cart-content">
+
+                    <?php
+
+                        // If logged in.
+                        if (isset($_SESSION["name"])) {
+
+                            // If the user has just successfully logged in.
+                            if (isset($_GET['login'])) {
+                                if ($_GET['login'] == 'success') {
+                                    echo '<div class="action-success"><p>You are now logged in!</p></div>';
+                                }
+                            }                            
+
+                        } else {
+
+                            // If server-side validation checks failed.
+                            if (isset($_GET['error'])) {
+
+                                echo '<div class="hint reveal">';                                
+
+                                if ($_GET['error'] == "missingdata") {
+                                    echo '<p><i class="fas fa-exclamation"></i>Missing email or password</p>';
+                                }
+
+                                if ($_GET['error'] == "notfound") {
+                                    echo '<p><i class="fas fa-exclamation"></i>No user with that email could be found.</p>';
+                                }
+
+                                if ($_GET['error'] == "wrongpwd") {
+                                    echo '<p><i class="fas fa-exclamation"></i>Incorrect password.</p>';
+                                }
+
+                                echo '</div>';
+                            }
+
+                            // Login form.
+                            echo '<p class="strong">In order to purchase items, you must be logged in:</p>';
+                            echo '<form class="input-form" action="php/login.inc.php" method="post">';
+                            echo '<label for="email">Email address:</label>';
+                            echo '<input type="text" id="email" name="email" placeholder="Enter email address">';
+                            echo '<label for="password">Password:</label>';
+                            echo '<input type="password" id="password" name="password" placeholder="Enter password">';
+                            echo '<input type="submit" value="Login" name="login-submit">';
+                            echo '</form>';
+                            echo '<hr class="light"/>';
+                            
+                        }
+                    ?>
+
                     <h1>Shopping Cart</h1>
                     <p>The items you've added to your shopping cart are:</p>
 
