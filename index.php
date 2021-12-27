@@ -41,6 +41,22 @@
 
                 <!-- ==================== Page Content ==================== -->
                 <div class="content">
+
+                    <!-- Display offers --> 
+                    <?php 
+
+                        if (!isset($_GET['sqlerror'])) {
+
+                            echo '<h1>Offers</h1>';
+                            echo '<div class="offers-container">';
+
+                            include "php/offers.inc.php";
+                            
+                            echo '</div>';
+                        }                            
+                        
+                    ?>
+
                     <h1>Where opportunity creates success</h1>
                     <p>Every student at The University of Central Lancashire is automatically a member of the Students' Union.</p>
                     <p>We're here to make life better for students - inspiring you to succeed and achieve your goals.</p>

@@ -142,7 +142,7 @@ body {
 
 
 
-/* ==================== Page Content Styles ==================== */
+/* ==================== Homepage Styles ==================== */
 .content {
     margin: 1rem auto; /* Automatically center the content using left/right margins */
     width: 55rem;
@@ -166,6 +166,31 @@ body {
 .youtube-video {
     height: 25rem;
     width: inherit;
+}
+
+.offers-container {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.offer {
+    background-color: var(--slate);
+    box-shadow: 0 0 10px var(--slate);
+    flex-basis: 17rem;
+}
+
+.offer h2 {
+    margin: 0;
+    padding: 1rem;
+}
+
+.offer p {
+    background-color: var(--cloud);
+    margin: 0;
+    min-height: 7rem;
+    padding: 1rem;    
 }
 
 /* ==================== Footer Styles ==================== */
@@ -668,6 +693,11 @@ body {
         margin: .4rem 0;
     }
 
+    .offer p {
+        margin: 0;
+        padding: 1rem;
+    }
+
     .youtube-video {
         height: 17rem;
     }
@@ -722,6 +752,11 @@ body {
     .content p {
         font-size: 0.9rem;
         margin: .3rem 0;
+    }
+
+    .offer p {
+        margin: 0;
+        padding: 1rem;
     }
 
     .youtube-video {
