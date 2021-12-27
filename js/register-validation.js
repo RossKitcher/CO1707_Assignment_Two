@@ -252,6 +252,15 @@ form.addEventListener("input", (element) => {
     showErrorMessage(passLengthCheck, hint, 1);
     showErrorMessage(passMatch, hint, 1);
 
+    let submitButton = document.getElementsByName("register-submit")[0]; // Get the submit button.
+    let inputBoxes = document.getElementsByClassName("success"); // Get all input boxes that feature the class 'success', indicating no validation errors.
+
+    // If all boxes in the form feature the class 'success', then enable the Submit button.
+    if (inputBoxes.length == 5) {
+        submitButton.disabled = false;
+    } else {
+        submitButton.disabled = true;
+    }
 })
 
 

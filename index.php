@@ -11,6 +11,9 @@
         <!-- Set title. -->
         <title>Student Shop Homepage</title>
 
+        <!-- Import kit from https://fontawesome.com/ to allow the use of symbols. -->
+        <script src="https://kit.fontawesome.com/8b3dff7f8c.js" crossorigin="anonymous"></script>
+
         <!-- Import stylesheets. -->
         <link rel="stylesheet" href="styles/main.css">
     </head>
@@ -20,6 +23,20 @@
 
                 <?php
                     include './php/header.php';
+                ?>
+
+                <?php
+                    if (isset($_GET['sqlerror'])) {
+                        if ($_GET['sqlerror'] == "true") {
+                            
+                            echo '<div class="hint reveal">';
+
+                            echo '<p><i class="fas fa-database"></i>Could not connect to the database.</p>';
+
+                            echo '</div>';
+                            
+                        }
+                    }
                 ?>
 
                 <!-- ==================== Page Content ==================== -->

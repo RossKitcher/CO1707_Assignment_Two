@@ -27,12 +27,69 @@
 
                 <!-- ==================== Page Content ==================== -->
                 <div class="content">
+
+                    <!-- Check for possible GET variables. -->
+                    <?php
+
+                        // If the user has just successfully registered.
+                        if (isset($_GET['register'])) {
+                            if ($_GET['register'] == 'success') {
+                                echo '<div class="register-success"><p>You are now registered!</p></div>';
+                            }
+                        }
+
+                        // If server-side validation checks failed.
+                        if (isset($_GET['error'])) {
+                            echo '<div class="hint reveal">';
+
+                            $errorCode = $_GET['error'];
+
+                            if ($errorCode[0] == "1") {
+                                echo '<p><i class="fas fa-exclamation"></i>All boxes require data.</p>';
+                            }
+
+                            if ($errorCode[1] == "1") {
+                                echo '<p><i class="fas fa-exclamation"></i>Email is invalid.</p>';
+                            }
+
+                            if ($errorCode[2] == "1") {
+                                echo '<p><i class="fas fa-exclamation"></i>There is already an account registered with that email.</p>';
+                            }
+
+                            if ($errorCode[3] == "1") {
+                                echo '<p><i class="fas fa-exclamation"></i>Passwords do not match.</p>';
+                            }
+
+                            if ($errorCode[4] == "1") {
+                                echo '<p><i class="fas fa-exclamation"></i>Password is too short.</p>';
+                            }
+
+                            if ($errorCode[5] == "1") {
+                                echo '<p><i class="fas fa-exclamation"></i>Password does not meet all requirements.</p>';
+                            }
+
+                            echo '</div>';
+                        }
+
+                        // If an unexpected SQL error has been found.
+                        if (isset($_GET['sqlerror'])) {
+                            if ($_GET['sqlerror'] == "true") {
+                                echo '<div class="hint reveal">';
+
+                                echo '<p><i class="fas fa-database"></i>A SQL error has occured.</p>';
+
+                                echo '</div>';
+                            }
+                        }
+                    ?>
+
                     <h1>Register</h1>
                     <p>In order to purchase from the Students' Union shop, you need to create an account with all fields below required. If you have any difficulties please contact the webmaster.</p>
                     
                     <!-- Form for registration -->
                     <!-- All containers with class 'hint' are programatically shown/occulted using register-validation.js -->
-                    <form class="register">
+                    <!-- On submission, a POST request is sent to php/register.inc.php -->
+                    <form action="php/register.inc.php" method="post" class="register">
 
                         <label for ="fullName">Full name:</label>
                         <input type="text" id="fullName" name="fullName" placeholder="Enter full name">
@@ -74,9 +131,8 @@
                             <p class="hidden"><i class="fas fa-exclamation"></i> This is a required field.</p>
                         </div>
 
-                        <input type="submit" value="Submit">
+                        <input type="submit" value="Submit" name="register-submit" disabled>
                     </form>
-
                 </div>
 
                 <?php

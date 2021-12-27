@@ -494,6 +494,7 @@ body {
     width: 100%;
 }
 
+/* Style form input boxes */
 .register input, .register textarea {
     border: .5px solid var(--cloud);
     box-sizing: border-box;
@@ -506,6 +507,7 @@ body {
     width: 100%;
 }
 
+/* Style the Submit button. */
 .register input[type=submit] {
     background-color: var(--lake);
     border: none;
@@ -519,8 +521,16 @@ body {
     width: 100%;
 }
 
+/* When the Submit button is hovered. */
 .register input[type=submit]:hover {
     padding: 1rem 1rem;
+}
+
+/* When the Submit button is disabled. */
+.register input[type=submit]:disabled {
+    background-color: #fc7784;
+    color: black;
+    cursor: not-allowed;
 }
 
 .register label {
@@ -528,6 +538,7 @@ body {
     margin-bottom: .5rem;
 }
 
+/* When form input boxes are hovered. */
 .register input:hover, .register textarea:hover, :focus-visible {
     box-shadow: 0 0 10px var(--slate);
     outline: none;
@@ -541,6 +552,7 @@ body {
     background-color: white;
 }
 
+/* Failed validation checks. */
 .hint {
     background-color: #fc7784;
     color: black;
@@ -566,6 +578,15 @@ body {
     margin-bottom: 1rem;
     opacity: 1;
     padding: 1rem;
+}
+
+.register-success {
+    background-color: #abffca;
+    box-sizing: border-box;
+    font-weight: 700;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
 }
 
 /* Styles for screen sizes less than 1080px and more than 800px (laptops) */
