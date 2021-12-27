@@ -73,7 +73,7 @@
 <!-- ==================== Navigation ==================== -->
 <header class="nav">
     <nav>
-        <img class="logo" src="resources/uclan-logo.png" alt="UClan logo.">
+        <img class="logo" src="images/uclan-logo.png" alt="UClan logo.">
         <h1 class="nav-header">Student Shop</h1>
 
         <!-- Primary navigation that is displayed by default. -->

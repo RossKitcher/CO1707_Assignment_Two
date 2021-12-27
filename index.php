@@ -51,7 +51,7 @@
                             echo '<div class="offers-container">';
 
                             include "php/offers.inc.php";
-                            
+
                             echo '</div>';
                         }                            
                         
@@ -66,7 +66,7 @@
 
                     <!-- HTML5 Video -->
                     <video class="youtube-video" controls>
-                        <source src="resources/uclan-together.mp4" type="video/mp4"/>
+                        <source src="images/uclan-together.mp4" type="video/mp4"/>
                         Sorry, your browser does not support the video tag.
                     </video>
 
