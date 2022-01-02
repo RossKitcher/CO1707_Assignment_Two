@@ -549,6 +549,70 @@ body {
     width: 100%;
 }
 
+.reviews {
+    margin: 1rem auto;
+    width: 70%;
+}
+
+.reviews h4 {
+    margin: .5rem 0;
+    font-size: 1.5rem;
+}
+
+.reviews-flex-parent {
+    align-content: stretch;
+    align-items: flex-start;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+}
+
+.review {
+    background-color: var(--cloud);
+    flex-grow: 1;
+    padding: 1rem;
+}
+
+.review h4 {
+    color: var(--slate);
+    margin: 1rem 0;
+    font-size: 1.4rem;
+}
+
+.review .rating {
+    font-weight: 700;
+    text-align: center;
+}
+
+.review .author {
+    color: #818791;
+    display: block;
+    text-align: right;
+    width: auto;
+}
+
+/* Styles for different review ratings. */
+.excellent {
+    box-shadow: 0 0 3px #36ff6b;
+}
+
+.great {
+    box-shadow: 0 0 3px #a2fab9;
+}
+
+.okay {
+    box-shadow: 0 0 3px #f8ff75;
+}
+
+.bad {
+    box-shadow: 0 0 3px #ffcfcf;
+}
+
+.terrible {
+    box-shadow: 0 0 3px #ff8585;
+}
+
+
 
 /* ==================== Register/Login Styles ==================== */
 
@@ -752,10 +816,6 @@ body {
         width: 25rem;
     }
 
-    .cart-content {
-        width: 90%;
-    }
-
     .content-wrap {
         padding-bottom: 30rem;
     }
@@ -764,9 +824,10 @@ body {
         height: 30rem;
     }
 
-    .review-content {
+    .review-content, .cart-content, .reviews {
         width: 90%;
     }
+    
 }
 /* Styles for screen sizes less than 500px (smartphones) */
 @media only screen and (max-width: 500px) {

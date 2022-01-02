@@ -45,7 +45,12 @@
 
                 </div>
 
-                
+                <div class="reviews">
+
+                    <!-- If reviews are present for the current product, display them. -->
+                    <?php $prodID = $_GET['id']; require 'php/get_reviews.inc.php'; ?>
+                    
+                </div>
 
                 
                 <div class="review-content">
@@ -78,7 +83,7 @@
                                         
                                         <div class="input-section">
                                             <label for="comment">Comments:</label>
-                                            <textarea type="text" id="comment" name="comment" maxlength="200" rows="4" cols="50" placeholder="Enter review comments"></textarea>
+                                            <textarea type="text" id="comment" name="comment" maxlength="1000" rows="4" cols="50" placeholder="Enter review comments"></textarea>
                                         </div>
                 
                                         <div class="input-section">

@@ -47,6 +47,7 @@ if (isset($_POST['login-submit'])) {
             // Start a PHP server-side session for persistence.
             session_start();
             $_SESSION['name'] = $row[1];
+            $_SESSION['userID'] = $row[0];
 
             header("Location: ../cart.php?login=success");
             exit();
