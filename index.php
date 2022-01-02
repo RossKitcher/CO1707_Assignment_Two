@@ -22,7 +22,7 @@
             <div class="content-wrap">
 
                 <?php
-                    include './php/header.php';
+                    include './includes/header.inc.php';
                 ?>
 
                 <?php
@@ -50,7 +50,7 @@
                             echo '<h1>Offers</h1>';
                             echo '<div class="offers-container">';
 
-                            include "php/offers.inc.php";
+                            include "includes/offers.inc.php";
 
                             echo '</div>';
                         }                            
@@ -77,7 +77,7 @@
                 </div>
 
                 <?php
-                    include './php/footer.php';
+                    include './includes/footer.inc.php';
                 ?>
                 
             </div>

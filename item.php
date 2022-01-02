@@ -23,7 +23,7 @@
             <div class="content-wrap">
 
                 <?php
-                    include './php/header.php';
+                    include './includes/header.inc.php';
                 ?>
 
                 <?php
@@ -40,15 +40,15 @@
                 <!-- ==================== Page Content ==================== -->
                 <div class="item-container">
 
-                    <!-- item contents are displayed using php/get_item.inc.php -->
-                    <?php require 'php/get_item.inc.php' ?>
+                    <!-- item contents are displayed using includes/get_item.inc.php -->
+                    <?php require 'includes/get_item.inc.php' ?>
 
                 </div>
 
                 <div class="reviews">
 
                     <!-- If reviews are present for the current product, display them. -->
-                    <?php $prodID = $_GET['id']; require 'php/get_reviews.inc.php'; ?>
+                    <?php $prodID = $_GET['id']; require 'includes/get_reviews.inc.php'; ?>
                     
                 </div>
 
@@ -74,7 +74,7 @@
                         if (isset($_SESSION["name"])) {
 
                             echo '  <h4>Post Review</h4>
-                                    <form action="php/post_review.inc.php" method="post" class="input-form" id="review-form">
+                                    <form action="includes/post_review.inc.php" method="post" class="input-form" id="review-form">
                 
                                         <div class="input-section">
                                             <label for="title">Title:</label>
@@ -113,7 +113,7 @@
                 </div>
 
                 <?php
-                    include './php/footer.php';
+                    include './includes/footer.inc.php';
                 ?>
                 
             </div>

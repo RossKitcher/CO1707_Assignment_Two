@@ -23,7 +23,7 @@
             <div class="content-wrap">
 
                 <?php
-                    include './php/header.php';
+                    include './includes/header.inc.php';
                 ?>
 
                 <!-- ==================== Page Content ==================== -->
@@ -65,7 +65,7 @@
 
                             // Login form.
                             echo '<p class="strong">In order to purchase items, you must be logged in:</p>';
-                            echo '<form class="input-form" action="php/login.inc.php" method="post">';
+                            echo '<form class="input-form" action="includes/login.inc.php" method="post">';
                             echo '<label for="email">Email address:</label>';
                             echo '<input type="text" id="email" name="email" placeholder="Enter email address">';
                             echo '<label for="password">Password:</label>';
@@ -87,7 +87,7 @@
                         } else {
                             echo "<p>The items you've added to your shopping cart are:</p>";
                         }
-                        
+
                     ?>
                     
 
@@ -112,7 +112,7 @@
 
 
                 <?php
-                    include './php/footer.php';
+                    include './includes/footer.inc.php';
                 ?>
                 
             </div>

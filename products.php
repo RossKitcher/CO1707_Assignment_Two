@@ -25,7 +25,7 @@
                 </div>
 
                 <?php
-                    include './php/header.php';
+                    include './includes/header.inc.php';
                 ?>
 
                 <!-- ==================== Page Content ==================== -->
@@ -55,14 +55,14 @@
                                     $search = $_GET['search'];
                                 }
                             }
-                            require 'php/get_products.inc.php';
+                            require 'includes/get_products.inc.php';
                         ?>
                         
                     </div>
                 </div>
 
                 <?php
-                    include './php/footer.php';
+                    include './includes/footer.inc.php';
                 ?>
 
             </div>
