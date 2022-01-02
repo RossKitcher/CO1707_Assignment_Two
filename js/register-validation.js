@@ -198,7 +198,7 @@ showErrorMessage = (show, hint, pos) => {
 }
 
 // Get the form for validation
-let form = document.getElementsByClassName("register")[0];
+let form = document.getElementsByClassName("input-form")[0];
 
 // Event listener for all <input> tags in the form.
 // Triggers on any change to the content of the element.
