@@ -238,25 +238,69 @@ body {
 
 /* ==================== Products Styles ==================== */
 
-/* Style the same-page navigation. */
-.products-page ul {
-    display: block;
-    margin: 0;
+.products-page {
+    margin: 1rem auto;
+    width: 80%;
 }
 
-.products-page ul li {
-    display: inline-block;    
-}
-
-.products-page ul li a {
-    display: block;
-    margin: .5rem 0;
-    padding: .5rem 1rem;
+.filter-link {
+    border: 1px solid black;
+    border-bottom: none;
+    border-top: none;
+    box-sizing: border-box;
+    color: var(--slate);
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    padding: 1rem 0;
+    text-align: center;
+    text-decoration: none;
     transition: .3s;
+    width: 33.3%;
 }
 
-.products-page ul li a:hover {
+.products-page a:nth-child(3) {
+    border: none;
+}
+
+.filter-link:hover {
     background-color: var(--slate);
+    border-color: var(--slate);
+    color: white;
+}
+
+.prod-search {
+    margin: 1rem 0 .5rem 0;
+    width: 100%;
+}
+
+.search-box {
+    border: 1px solid var(--cloud);
+    border-right: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 1rem;
+    transition: .3s;
+    width: 70%;
+}
+
+.search-box:hover {
+    box-shadow: 0 0 10px var(--slate);
+}
+
+.search-button {
+    border: 1px solid var(--cloud);
+    border: 1px solid var(--cloud);
+    cursor: pointer;
+    margin: 0;
+    padding: 1rem;
+    transition: .3s;
+    width: 30%;
+}
+
+.search-button:hover {
+    background-color: var(--red);
     color: white;
 }
 
@@ -294,14 +338,13 @@ body {
     flex-flow: row wrap; /* Display children from left to right and wrap children to fit screen width. */
     gap: 1rem; /* Add a 'gap' in-between each child. */
     justify-content: space-evenly; /* Display children evenly. */
-    margin: 1rem 4rem;
 }
 
 /* Style the FlexBox children. */
 .products-child {
     border-radius: 4px;
     box-shadow: 0 0 8px var(--slate); /* Add a small shadow to add emphasis to a product. */
-    flex-basis: 25rem; /* Set default size of element. */
+    flex-basis: 20rem; /* Set default size of element. */
     flex-grow: 0; /* Keep a consistent width if screen is resized. */
 }
 
@@ -887,6 +930,19 @@ body {
 
     .item-desc button {
         font-size: .9rem;
+    }
+
+    .filter-link {
+        border: 1px solid black;
+        border-left: none;
+        border-right: none;
+        margin: 0;
+        display: block;
+        width: 100%;
+    }
+
+    .products-page a:nth-child(4) {
+        margin-bottom: 1rem;
     }
 }
 

@@ -30,17 +30,34 @@
 
                 <!-- ==================== Page Content ==================== -->
                 <div class="products-page">
-                    <ul>
-                        <!-- Elements for same page navigation. -->
-                        <li>Products ></li>
-                        <li><a href="#tshirt">t-shirts</a></li>
-                        <li><a href="#hoodie">hoodies</a></li>
-                        <li><a href="#jumper">jumpers</a></li>
-                    </ul>
-                    <div class="products-parent" id="displayProducts">
-                        
-                        <!-- Content of this container is populated using generate-products.js -->
 
+                    <!-- Search box functionality, Empty comments are used inbetween elements to remove the space created by using inline-blockk elements. -->
+                    <!-- Source: https://css-tricks.com/fighting-the-space-between-inline-block-elements/ -->
+                    <form action="/products.php" method="get" class="prod-search"> 
+                        <input type="test" id="search" name="search" class="search-box" placeholder="Search..."><!--
+                        --><input type="submit" value="Go" class="search-button"> 
+                    </form>
+
+                    <!-- Links to filter the displayed products, again, empty comments are used. -->                    
+                    <a class="filter-link" href="/products.php?type=UCLan Hoodie">Hoodies</a><!--
+                    --><a class="filter-link" href="/products.php?type=UCLan Logo Jumper">Jumpers</a><!--
+                    --><a class="filter-link" href="/products.php?type=UCLan Logo Tshirt">Tshirts</a>
+
+                    <!-- Display all relevant products. -->
+                    <div class="products-parent">
+                        <?php
+                            
+                            // Set specific variables depending on the GET parameters found, this is used as the SQL queries vary depending on the user's intention.
+                            if (isset($_GET['type'])) {
+                                $type = $_GET['type'];
+                            } else if (isset($_GET['search'])) {
+                                if (!empty($_GET['search'])) {
+                                    $search = $_GET['search'];
+                                }
+                            }
+                            require 'php/get_products.inc.php';
+                        ?>
+                        
                     </div>
                 </div>
 
@@ -53,6 +70,5 @@
 
         <!-- Import JavaScript. -->
         <script src="js/main.js"></script>
-        <script src="js/generate-products.js"></script>
     </body>
 </html>
