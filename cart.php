@@ -78,7 +78,18 @@
                     ?>
 
                     <h1>Shopping Cart</h1>
-                    <p>The items you've added to your shopping cart are:</p>
+
+                    <?php
+
+                        // If the user is logged in, display a personalised message.
+                        if (isset($_SESSION['name'])) {
+                            echo "<p>Welcome ".$_SESSION['name'].", the items you've added to your shopping cart are:</p>";
+                        } else {
+                            echo "<p>The items you've added to your shopping cart are:</p>";
+                        }
+                        
+                    ?>
+                    
 
                     <!-- Flexbox container to hold all the items inside the shopping cart. -->
                     <div class="cart-parent" id="cartParent">
