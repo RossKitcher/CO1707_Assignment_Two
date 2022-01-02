@@ -512,6 +512,44 @@ body {
     font-size: 2rem;
 }
 
+.review-content {
+    background-color: #e0e0e0;
+    box-shadow: 0 0 10px #e0e0e0;
+    display: block;
+    margin: 0 auto 1rem auto;
+    width: 70%;
+}
+
+.review-content h4 {
+    background-color: var(--slate);
+    box-sizing: border-box;
+    color: white;
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0;
+    padding: 1rem;
+    width: 100%;
+}
+
+.review-content p {
+    font-weight: 700;
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+}
+
+.input-section {
+    padding: 1rem;
+}
+
+.input-section select {
+    font-size: 1.2rem;
+    padding: .5rem 1rem;
+    width: 100%;
+}
+
+
 /* ==================== Register/Login Styles ==================== */
 
 .input-form {
@@ -725,6 +763,10 @@ body {
     .stay-bottom {
         height: 30rem;
     }
+
+    .review-content {
+        width: 90%;
+    }
 }
 /* Styles for screen sizes less than 500px (smartphones) */
 @media only screen and (max-width: 500px) {
@@ -907,6 +949,10 @@ body {
 
     .cart-empty p {
         font-size: .85rem;
+    }
+    
+    .input-section {
+        padding: .5rem 1rem;
     }
 }
 
