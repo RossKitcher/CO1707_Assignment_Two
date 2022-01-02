@@ -1,10 +1,10 @@
 <?php
 
 // Database credentials.
-$servername = 'localhost';
-$dbUsername = 'root';
-$dbPassword = 'Herring@1232';
-$dbName = 'co1706_csk2';
+$servername = '';
+$dbUsername = '';
+$dbPassword = '';
+$dbName = '';
 
 try {
 
