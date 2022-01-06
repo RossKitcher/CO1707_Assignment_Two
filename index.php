@@ -50,7 +50,7 @@
                             echo '<h1>Offers</h1>';
                             echo '<div class="offers-container">';
 
-                            include "includes/offers.inc.php";
+                            include "includes/get_offers.inc.php";
 
                             echo '</div>';
                         }                            

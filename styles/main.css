@@ -177,13 +177,14 @@ body {
 
 .offer {
     background-color: var(--slate);
-    box-shadow: 0 0 10px var(--slate);
+    box-shadow: 0 0 5px var(--slate);
     flex-basis: 17rem;
 }
 
 .offer h2 {
     margin: 0;
     padding: 1rem;
+    color: white;
 }
 
 .offer p {
