@@ -1,5 +1,7 @@
 <?php
 
+session_start(); // Start session.
+
     // Function to determine if the given page is the 'active' one.
     function isActive($page) {
 
@@ -39,7 +41,6 @@
         $pageNames = ["Register", "Cart", "Products", "Home"];
         $urlNames = ["register.php", "cart.php", "products.php", "index.php"];
         
-        session_start();
 
         if (isset($_SESSION["name"])) {
             $pageNames[0] = "Logout";

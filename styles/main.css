@@ -850,6 +850,11 @@ body {
 
 /* Styles for screen sizes less than 1080px and more than 800px (laptops) */
 @media only screen and (max-width: 1080px) {
+
+    .nav-link a {
+        padding: 1rem .6rem;
+    }
+
     .content {
         width: 45rem;
     }
@@ -1054,6 +1059,16 @@ body {
 
 /* Styles for screen sizes less than 400px. */
 @media only screen and (max-width: 400px) {
+
+    .show .burger-link a {
+        font-size: .9rem;
+        padding: 1rem .6rem;
+    }
+
+    .burger-links {
+        padding-left: 1rem;
+    }
+
     .logo {
         height: 70px;
     }
