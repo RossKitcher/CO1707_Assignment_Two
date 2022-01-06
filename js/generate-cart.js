@@ -44,6 +44,8 @@ for (let i = 0; i < fullCartAmount; i++) {
 let subtotal = 0; // Set subtotal to zero.
 let children = {}; // Declare an object to hold key/value pairs of table rows.
 
+let cartIDs = ""; // Declare a string to hold all id's currently inside the user's cart.
+
 // If the shopping cart is empty, then display a message letting the user know.
 // Else if it is not empty, programatically create a table row for each item in the shopping cart.
 if (realAmount == 0) {
@@ -67,6 +69,10 @@ if (realAmount == 0) {
         let tempColour = itemArray[1];
         let tempPrice = itemArray[2];
         let tempFilepath = itemArray[3];
+        let tempID = itemArray[4];
+
+        // Update the cartIDs string to keep track of the products currently inside the cart.
+        cartIDs += tempID + ",";
     
         // Create new HTML elements to hold the data to be added.
         let flexChildContainer = document.createElement("div"); 
@@ -134,28 +140,57 @@ if (realAmount == 0) {
     
     let pageContainer = flexParentContainer.parentElement;
 
+    // Create new nodes for the remove all button and place order button.
+    // The place order button is created inside a form to allow a php to send a POST request when clicked. 
+    let buttonsContainer = document.createElement("div");
+    let removeAllNode = document.createElement("button");
+    let orderForm = document.createElement("form");
+    let hiddenIDs = document.createElement("input");
+    let placeOrderNode = document.createElement("input");
+
+    // Add classes and set attributes.
+
+    buttonsContainer.classList.add("cart-buttons-container");
+
+    removeAllNode.classList.add("cart-button");
+    removeAllNode.classList.add("remove-all");
+
+    orderForm.action = "includes/post_order.inc.php";
+    orderForm.method = "post";
+
+    hiddenIDs.type = "hidden";
+    hiddenIDs.name = "items";
+    hiddenIDs.value = cartIDs;
+
+    placeOrderNode.classList.add("cart-button");
+    placeOrderNode.classList.add("place-order");
+    placeOrderNode.type = "submit";
+    placeOrderNode.value = "Place Order";
+    placeOrderNode.name = "place-order";
+
+    let removeAllAtt = document.createAttribute("onclick");
+    removeAllAtt.value = "handleRemoveAll()";
+    removeAllNode.setAttributeNode(removeAllAtt);
+    removeAllNode.innerHTML = "Clear all";
+
+    // Append the new nodes to their parent containers.
+    orderForm.appendChild(hiddenIDs);
+    orderForm.appendChild(placeOrderNode);
+    buttonsContainer.appendChild(removeAllNode);
+    buttonsContainer.appendChild(orderForm);
+
     // Create a new container to show the subtotal.
     let divider = document.createElement("hr");
     let subtotalContainer = document.createElement("div");
     let subtotalText = document.createElement("p");
-    let removeAllNode = document.createElement("button");
 
     divider.classList.add("light");
-    removeAllNode.classList.add("remove-all"); // Add class to element.
     subtotalContainer.classList.add("subtotal");
-
-    // Create onclick attribute.
-    let onclickAtt = document.createAttribute("onclick");
-    onclickAtt.value = "handleRemoveAll()";
-    
-    // Set attribute.
-    removeAllNode.setAttributeNode(onclickAtt);
     
     // Create text content.
     subtotalText.innerHTML = "Subtotal: " + subtotal;
-    removeAllNode.innerHTML = "Clear all";   
 
-    pageContainer.appendChild(removeAllNode);
+    pageContainer.appendChild(buttonsContainer);
     pageContainer.appendChild(divider);
     subtotalContainer.appendChild(subtotalText);
     pageContainer.appendChild(subtotalContainer);

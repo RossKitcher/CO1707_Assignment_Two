@@ -31,6 +31,39 @@
 
                     <?php
 
+                        // If server-side validation checks failed.
+                        if (isset($_GET['error'])) {
+
+                            echo '<div class="hint reveal">';                                
+
+                            if ($_GET['error'] == "missingdata") {
+                                echo '<p><i class="fas fa-exclamation"></i>Missing email or password</p>';
+                            }
+
+                            if ($_GET['error'] == "notfound") {
+                                echo '<p><i class="fas fa-exclamation"></i>No user with that email could be found.</p>';
+                            }
+
+                            if ($_GET['error'] == "wrongpwd") {
+                                echo '<p><i class="fas fa-exclamation"></i>Incorrect password.</p>';
+                            }
+
+                            if ($_GET['error'] == "nologin") {
+                                echo '<p><i class="fas fa-exclamation"></i>Please login before placing an order.</p>';
+                            }
+
+                            if ($_GET['error'] == "emptycart") {
+                                echo '<p><i class="fas fa-exclamation"></i>You\'re shopping cart is empty!</p>';
+                            }
+
+                            if ($_GET['error'] == "sql") {
+                                echo '<p><i class="fas fa-exclamation"></i>An unexpected SQL error occured.</p>';
+                            }
+
+                            echo '</div>';
+                            
+                        }
+
                         // If logged in.
                         if (isset($_SESSION["name"])) {
 
@@ -42,27 +75,6 @@
                             }                            
 
                         } else {
-
-                            // If server-side validation checks failed.
-                            if (isset($_GET['error'])) {
-
-                                echo '<div class="hint reveal">';                                
-
-                                if ($_GET['error'] == "missingdata") {
-                                    echo '<p><i class="fas fa-exclamation"></i>Missing email or password</p>';
-                                }
-
-                                if ($_GET['error'] == "notfound") {
-                                    echo '<p><i class="fas fa-exclamation"></i>No user with that email could be found.</p>';
-                                }
-
-                                if ($_GET['error'] == "wrongpwd") {
-                                    echo '<p><i class="fas fa-exclamation"></i>Incorrect password.</p>';
-                                }
-
-                                echo '</div>';
-                            }
-
                             // Login form.
                             echo '<p class="strong">In order to purchase items, you must be logged in:</p>';
                             echo '<form class="input-form" action="includes/login.inc.php" method="post">';
@@ -73,7 +85,6 @@
                             echo '<input type="submit" value="Login" name="login-submit">';
                             echo '</form>';
                             echo '<hr class="light"/>';
-                            
                         }
                     ?>
 
@@ -105,14 +116,21 @@
                         </div>
 
                         <!-- Other items in the cart are added using generate-cart.js -->
-                        <!-- along with extra features such as a remove button for each item, a remove all button, and a subtotal. -->
+                        <!-- along with extra features such as a remove button for each item, a remove all button, a place order button, and a subtotal. -->
 
                     </div>
+
                 </div>
 
+                <?php 
 
-                <?php
+                    // If the user is logged in, get any pending orders.
+                    if (isset($_SESSION['name'])) {
+                        require 'includes/get_orders.inc.php';
+                    }
+
                     include './includes/footer.inc.php';
+
                 ?>
                 
             </div>
@@ -122,6 +140,7 @@
 
         <!-- Import JavaScript. -->
         <script src="js/main.js"></script>
+        <script src="js/order-placed.js"></script>
         <script src="js/generate-cart.js"></script>
     </body>
 </html>

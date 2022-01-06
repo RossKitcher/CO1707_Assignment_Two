@@ -1,7 +1,5 @@
 <?php
 
-require 'db_connect.inc.php'; // Connect to database.
-
 // Initialise SQL statement.
 $sql = "select user_full_name from tbl_users where user_id=?";
 $stmt = mysqli_stmt_init($conn);

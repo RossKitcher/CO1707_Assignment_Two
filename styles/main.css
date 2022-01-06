@@ -411,13 +411,13 @@ body {
 /* ==================== Shopping Cart Styles ==================== */
 
 /* Set width and automatic horizontal margin for the main container. */
-.cart-content {
+.cart-content, .orders-content {
     display: block;
     margin: 1rem auto;
     width: 70%;
 }
 
-.cart-content h1 {
+.cart-content h1, .orders-content h1 {
     color: var(--gold);
     font-size: 2.4rem;
 }
@@ -506,26 +506,101 @@ body {
     width: 20%;
 }
 
-.remove-all {
-    background-color: var(--red);
-    border: none;
-    color: white;
-    cursor: pointer;
-    display: block;
-    margin: 1rem 0;
-    padding: .8rem;
-    transition: .3s;
+.cart-buttons-container {
+    display: inline-block;
     width: 100%;
 }
 
-.remove-all:hover {
+.cart-buttons-container form {
+    display: inline-block;
+    width: 70%;
+}
+
+.cart-button {
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    margin: 1rem 0;
+    padding: .8rem;
+    transition: .3s;
+}
+
+.remove-all {
+    background-color: var(--red);
+    width: 30%;
+}
+
+.cart-button:hover {
     font-weight: 700;
     padding: 1.2rem .8rem;
+}
+
+.place-order {
+    background-color: var(--lake);
+    color: white;
+    width: 100%;
 }
 
 /* Class to hide an element. */
 .hidden {
     display: none;
+}
+
+/*  Order Styles  */
+
+.complete-order {
+    background-color: var(--cloud);
+    box-shadow: 0 0 10px var(--cloud);
+}
+
+.complete-order h3 {
+    background-color: var(--slate);
+    color: white;
+    font-size: 1.6rem;
+    padding: 1rem;
+}
+
+.single-info {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: .5rem 1rem;
+    width: 100%;
+}
+
+.single-info h4 {
+    display: inline-block;
+    margin: 0;    
+}
+
+.single-info p {
+    display: inline;
+    float: right;
+    margin: 0;
+}
+
+.small-divider {
+    border: 1px dashed black;
+    display: block;
+    height: 0;
+    margin: .5rem 0 1rem 85%;
+    width: 15%;
+}
+
+.order-summary {
+    box-sizing: border-box;
+    font-weight: 700;
+    padding: 0 1rem 1rem 1rem;
+    text-align: right;
+}
+
+.order-summary p {
+    margin: .5rem 0;
+    padding: 0;
+}
+
+.shipping {
+    font-weight: 500;
 }
 
 /* ==================== View Item Styles ==================== */
@@ -763,6 +838,16 @@ body {
     font-weight: 700;
 }
 
+/* ==================== 404 Styles ==================== */
+.doesnt-exist {
+    background-color: #fc7784;
+    font-weight: 700;
+    margin: 1rem auto;
+    padding: 4rem 0;
+    text-align: center;
+    width: 80%;
+}
+
 /* Styles for screen sizes less than 1080px and more than 800px (laptops) */
 @media only screen and (max-width: 1080px) {
     .content {
@@ -867,7 +952,7 @@ body {
         height: 30rem;
     }
 
-    .review-content, .cart-content, .reviews {
+    .review-content, .cart-content, .reviews, .orders-content {
         width: 90%;
     }
     
@@ -944,6 +1029,15 @@ body {
     .products-page a:nth-child(4) {
         margin-bottom: 1rem;
     }
+
+    .single-info p {
+        float: none;
+    }
+
+    .small-divider {
+        margin: .5rem auto 1rem auto;
+        width: 80%;
+    }
 }
 
 /* Exact media query for when the footer flex box wraps to one child per row, ensuring the footer is always visible. */
@@ -998,7 +1092,7 @@ body {
         width: 17rem;
     }
 
-    .cart-content h1 {
+    .cart-content h1, .orders-content h1{
         font-size: 1.8rem;
     }
 
@@ -1065,7 +1159,7 @@ body {
     }
 
     .cart-empty p {
-        font-size: .85rem;
+        font-size: .8rem;
     }
     
     .input-section {

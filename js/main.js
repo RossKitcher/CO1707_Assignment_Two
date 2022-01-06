@@ -33,6 +33,7 @@ handleBuy = (element) => {
     // Extract the relevant data by navigating upwards throgh the DOM.
     let descContainer = element.parentElement;
     let divContainer = descContainer.parentElement;
+    let prodID = divContainer.id;
     let fullname = descContainer.getElementsByTagName("h3")[0].innerHTML;
     let price = descContainer.getElementsByTagName("p")[1].innerHTML;
     let imgFilepath = divContainer.getElementsByTagName("img")[0].getAttribute("src");
@@ -59,7 +60,7 @@ handleBuy = (element) => {
     }
     
     // Set item to localStorage.
-    localStorage.setItem("item" + (maxID+1), prodName + "," + prodColour + "," + price + "," + imgFilepath);
+    localStorage.setItem("item" + (maxID+1), prodName + "," + prodColour + "," + price + "," + imgFilepath + "," + prodID);
     
     // Alert the user.
     alert(prodName + " added to cart!");
