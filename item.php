@@ -23,7 +23,7 @@
             <div class="content-wrap">
 
                 <?php
-                    include './includes/header.inc.php';
+                    require './includes/header.inc.php';
                 ?>
 
                 <?php
@@ -113,7 +113,7 @@
                 </div>
 
                 <?php
-                    include './includes/footer.inc.php';
+                    require './includes/footer.inc.php';
                 ?>
                 
             </div>

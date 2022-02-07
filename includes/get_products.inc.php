@@ -37,7 +37,7 @@ while ($row = mysqli_fetch_row($results)) {
     echo '<img src="'. $row[3] .'" alt="'. $row[1] .'" />';
     echo '<div class="product-desc">';
     echo '<h3>'. $row[1] .'</h3>';
-    echo '<p>'. $row[2] .' <a href="item.php?id='. $row[0] . '" onclick="handleReadmore(this)">Read more...</a></p>';
+    echo '<p>'. $row[2] .' <a href="./item.php?id='. $row[0] . '" onclick="handleReadmore(this)">Read more...</a></p>';
     echo '<p class="price">£'. $row[4] .'</p>';
     echo '<button class="button" onclick="handleBuy(this)">Add to Cart</button>';
     echo '</div>';

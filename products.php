@@ -25,7 +25,7 @@
                 </div>
 
                 <?php
-                    include './includes/header.inc.php';
+                    require './includes/header.inc.php';
                 ?>
 
                 <!-- ==================== Page Content ==================== -->
@@ -33,15 +33,15 @@
 
                     <!-- Search box functionality, Empty comments are used inbetween elements to remove the space created by using inline-blockk elements. -->
                     <!-- Source: https://css-tricks.com/fighting-the-space-between-inline-block-elements/ -->
-                    <form action="/products.php" method="get" class="prod-search"> 
+                    <form action="products.php" method="get" class="prod-search"> 
                         <input type="test" id="search" name="search" class="search-box" placeholder="Search..."><!--
                         --><input type="submit" value="Go" class="search-button"> 
                     </form>
 
                     <!-- Links to filter the displayed products, again, empty comments are used. -->                    
-                    <a class="filter-link" href="/products.php?type=UCLan Hoodie">Hoodies</a><!--
-                    --><a class="filter-link" href="/products.php?type=UCLan Logo Jumper">Jumpers</a><!--
-                    --><a class="filter-link" href="/products.php?type=UCLan Logo Tshirt">Tshirts</a>
+                    <a class="filter-link" href="products.php?type=UCLan Hoodie">Hoodies</a><!--
+                    --><a class="filter-link" href="products.php?type=UCLan Logo Jumper">Jumpers</a><!--
+                    --><a class="filter-link" href="products.php?type=UCLan Logo Tshirt">Tshirts</a>
 
                     <!-- Display all relevant products. -->
                     <div class="products-parent">
@@ -62,7 +62,7 @@
                 </div>
 
                 <?php
-                    include './includes/footer.inc.php';
+                    require './includes/footer.inc.php';
                 ?>
 
             </div>

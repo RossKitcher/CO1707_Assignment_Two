@@ -22,7 +22,7 @@
             <div class="content-wrap">
 
                 <?php
-                    include './includes/header.inc.php';
+                    require './includes/header.inc.php';
                 ?>
 
                 <!-- ==================== Page Content ==================== -->
@@ -109,8 +109,8 @@
                     
                     <!-- Form for registration -->
                     <!-- All containers with class 'hint' are programatically shown/occulted using register-validation.js -->
-                    <!-- On submission, a POST request is sent to includes/register.inc.php -->
-                    <form action="includes/register.inc.php" method="post" class="input-form">
+                    <!-- On submission, a POST request is sent to includes/post_register.inc.php -->
+                    <form action="includes/post_register.inc.php" method="post" class="input-form">
 
                         <label for ="fullName">Full name:</label>
                         <input type="text" id="fullName" name="fullName" placeholder="Enter full name">
@@ -157,7 +157,7 @@
                 </div>
 
                 <?php
-                    include './includes/footer.inc.php';
+                    require './includes/footer.inc.php';
                 ?>
 
             </div>

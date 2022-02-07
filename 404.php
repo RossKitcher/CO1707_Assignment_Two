@@ -23,7 +23,7 @@
             <div class="content-wrap">
 
                 <?php
-                    include './includes/header.inc.php';
+                    require './includes/header.inc.php';
                 ?>
 
                 <div class="doesnt-exist">
@@ -31,11 +31,11 @@
                     <?php 
                         echo "The requested URL ". $_SERVER['REQUEST_URI'] ." could not be found.";
                     ?>
-                    
+
                 </div>
 
                 <?php
-                    include './includes/footer.inc.php';
+                    require './includes/footer.inc.php';
                 ?>
                 
             </div>
