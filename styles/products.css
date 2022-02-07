@@ -1,0 +1,298 @@
+/* ==================== Products Styles ==================== */
+
+.products-page {
+    margin: 1rem auto;
+    width: 80%;
+}
+
+.filter-link {
+    border: 1px solid black;
+    border-bottom: none;
+    border-top: none;
+    box-sizing: border-box;
+    color: var(--slate);
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    padding: 1rem 0;
+    text-align: center;
+    text-decoration: none;
+    transition: .3s;
+    width: 33.3%;
+}
+
+.products-page a:nth-child(3) {
+    border: none;
+}
+
+.filter-link:hover {
+    background-color: var(--slate);
+    border-color: var(--slate);
+    color: white;
+}
+
+.prod-search {
+    margin: 1rem 0 .5rem 0;
+    width: 100%;
+}
+
+.search-box {
+    border: 1px solid var(--cloud);
+    border-right: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 1rem;
+    transition: .3s;
+    width: 70%;
+}
+
+.search-box:hover {
+    box-shadow: 0 0 10px var(--slate);
+}
+
+.search-button {
+    border: 1px solid var(--cloud);
+    border: 1px solid var(--cloud);
+    cursor: pointer;
+    margin: 0;
+    padding: 1rem;
+    transition: .3s;
+    width: 30%;
+}
+
+.search-button:hover {
+    background-color: var(--red);
+    color: white;
+}
+
+/* Style the 'top' button container that will take the user to the top of the page. */
+.sticky-top-button {
+    background-color: var(--grey);
+    padding: 1rem 0;
+    position: fixed; 
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+/* Style the actual 'top' button. */
+.sticky-top-button a {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    padding: 1rem 10rem;
+    text-decoration: none;
+    transition: .3s;
+}
+
+/* Change the 'top' button's background color when it is hovered by the user. */
+.sticky-top-button a:hover {
+    background-color: #2b4359;
+}
+
+/* Style the FlexBox parent. */
+.products-parent {
+    align-items: flex-start; /* Align a row from the top of each child. */
+    display: flex;
+    flex-flow: row wrap; /* Display children from left to right and wrap children to fit screen width. */
+    gap: 1rem; /* Add a 'gap' in-between each child. */
+    justify-content: space-evenly; /* Display children evenly. */
+}
+
+/* Style the FlexBox children. */
+.products-child {
+    border-radius: 4px;
+    box-shadow: 0 0 8px var(--slate); /* Add a small shadow to add emphasis to a product. */
+    flex-basis: 20rem; /* Set default size of element. */
+    flex-grow: 0; /* Keep a consistent width if screen is resized. */
+}
+
+/* Style a product's display image. */
+.products-child img {
+    display: block;
+    height: 20rem;
+    margin: 0 auto;
+    width: 20rem;
+}
+
+/* Style a product's title. */
+.product-desc h3 {
+    color: var(--gold);
+    font-size: 2rem;
+    text-shadow: 0 0 3px black;
+}
+
+/* Style a product's description container. */
+.product-desc {
+    background-color: var(--slate);
+    padding: 1rem;
+}
+
+/* Style a product's textual description. */
+.product-desc p {
+    color: white;
+}
+
+/* Style a product's price. */
+.price {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+/* Style a product's 'Add to cart' button. */
+.button {
+    background-color: var(--gold);
+    border: none; /* Remove the default <button> styling. */
+    border-radius: 5px; /* Round the edges of the element. */
+    color: black;
+    cursor: pointer; /* Set the cursor's state when it hovers this button. */
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: .05rem;
+    margin: 0 auto;    
+    padding: .5rem 3rem;
+    text-decoration: none;
+    transition: .3s; /* Add transition timer for when :hover is triggered. */
+}
+
+/* When the button is hovered by the cursor. */
+.button:hover {
+    background-color: #bd9413;
+    padding: .6rem 3.5rem;
+}
+
+/* Slightly different width value for tshirts due to image dimensions no longer being a square. */
+.products-child .tshirt {
+    width: 16rem;
+}
+
+/* ==================== View Item Styles ==================== */
+
+.item-container {
+    border-radius: 4px;
+    box-shadow: 0 0 5px var(--slate);
+    display: block;
+    margin: 1rem auto;
+    width: 50rem;
+}
+
+.item-container img {
+    display: block;
+    margin: 0 auto;
+    width: 40rem;
+}
+
+.item-desc {
+    background-color: var(--slate);
+    color: white;
+    padding: 1rem;
+}
+
+.item-desc h3 {
+    color: var(--gold);
+    font-size: 2rem;
+}
+
+.review-content {
+    background-color: #e0e0e0;
+    box-shadow: 0 0 10px #e0e0e0;
+    display: block;
+    margin: 0 auto 1rem auto;
+    width: 70%;
+}
+
+.review-content h4 {
+    background-color: var(--slate);
+    box-sizing: border-box;
+    color: white;
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0;
+    padding: 1rem;
+    width: 100%;
+}
+
+.review-content p {
+    font-weight: 700;
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+}
+
+.input-section {
+    padding: 1rem;
+}
+
+.input-section select {
+    font-size: 1.2rem;
+    padding: .5rem 1rem;
+    width: 100%;
+}
+
+.reviews {
+    margin: 1rem auto;
+    width: 70%;
+}
+
+.reviews h4 {
+    margin: .5rem 0;
+    font-size: 1.5rem;
+}
+
+.reviews-flex-parent {
+    align-content: stretch;
+    align-items: flex-start;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+}
+
+.review {
+    background-color: var(--cloud);
+    flex-grow: 1;
+    padding: 1rem;
+}
+
+.review h4 {
+    color: var(--slate);
+    margin: 1rem 0;
+    font-size: 1.4rem;
+}
+
+.review .rating {
+    font-weight: 700;
+    text-align: center;
+}
+
+.review .author {
+    color: #818791;
+    display: block;
+    text-align: right;
+    width: auto;
+}
+
+/* Styles for different review ratings. */
+.excellent {
+    box-shadow: 0 0 3px #36ff6b;
+}
+
+.great {
+    box-shadow: 0 0 3px #a2fab9;
+}
+
+.okay {
+    box-shadow: 0 0 3px #f8ff75;
+}
+
+.bad {
+    box-shadow: 0 0 3px #ffcfcf;
+}
+
+.terrible {
+    box-shadow: 0 0 3px #ff8585;
+}

@@ -13,6 +13,8 @@
 
         <!-- Import stylesheets. -->
         <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/responsive.css">
+        <link rel="stylesheet" href="styles/products.css">
     </head>
     <body onresize="handleMenuResize()">
 

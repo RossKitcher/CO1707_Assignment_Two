@@ -13,6 +13,8 @@
 
         <!-- Import stylesheets. -->
         <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/responsive.css">
+        <link rel="stylesheet" href="styles/404.css">
 
         <!-- Import kit from https://fontawesome.com/ to allow the use of symbols. -->
         <script src="https://kit.fontawesome.com/8b3dff7f8c.js" crossorigin="anonymous"></script>

@@ -1,0 +1,183 @@
+/* ==================== Shopping Cart Styles ==================== */
+
+/* Set width and automatic horizontal margin for the main container. */
+.cart-content, .orders-content {
+    display: block;
+    margin: 1rem auto;
+    width: 70%;
+}
+
+.cart-content h1, .orders-content h1 {
+    color: var(--gold);
+    font-size: 2.4rem;
+}
+
+/* Style the flexbox parent. */
+.cart-parent {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+}
+
+/* Style the flexbox children */
+.cart-child {
+    background-color: var(--cloud);
+    box-shadow: 0 0 10px var(--cloud);
+    height: 18rem;
+}
+
+.cart-title {
+    background-color: var(--slate);
+    height: 4rem;
+}
+
+.cart-child h3 {
+    color: white;
+    display: inline-block;  
+    font-size: 1.6rem;  
+    margin: 0;
+    padding: 1rem;
+}
+
+.cart-desc {
+    display: inline-block;
+    font-size: 1.4rem;
+    padding: 0 1rem;
+    vertical-align: top;
+}
+
+.cart-child img {
+    display: inline-block;
+    height: 14rem;
+    width: 14rem;
+}
+
+.cart-remove {
+    display: inline-block;
+    width: 10%;
+}
+
+.cart-empty p {
+    color: var(--grey);
+    line-height: 14rem; /* Center vertically */
+    margin: 0;
+    text-align: center; /* Center horizontally */
+}
+
+.subtotal {
+    display: block;
+    font-weight: 700;
+    text-align: right;
+}
+
+/* Style the remove buttons by deleting default styling and adding my own. */
+.remove-button {
+    background-color: var(--red);
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: block;
+    float: right;
+    min-width: 6rem;
+    padding: 1.5rem 1rem;
+    text-decoration: none;
+    transition: .3s;
+    width: 10%;
+}
+
+.remove-button:hover {
+    font-weight: 700;
+    width: 20%;
+}
+
+.cart-buttons-container {
+    display: inline-block;
+    width: 100%;
+}
+
+.cart-buttons-container form {
+    display: inline-block;
+    width: 70%;
+}
+
+.cart-button {
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    margin: 1rem 0;
+    padding: .8rem;
+    transition: .3s;
+}
+
+.remove-all {
+    background-color: var(--red);
+    width: 30%;
+}
+
+.cart-button:hover {
+    font-weight: 700;
+    padding: 1.2rem .8rem;
+}
+
+.place-order {
+    background-color: var(--lake);
+    color: white;
+    width: 100%;
+}
+
+/*  Order Styles  */
+
+.complete-order {
+    background-color: var(--cloud);
+    box-shadow: 0 0 10px var(--cloud);
+}
+
+.complete-order h3 {
+    background-color: var(--slate);
+    color: white;
+    font-size: 1.6rem;
+    padding: 1rem;
+}
+
+.single-info {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: .5rem 1rem;
+    width: 100%;
+}
+
+.single-info h4 {
+    display: inline-block;
+    margin: 0;    
+}
+
+.single-info p {
+    display: inline;
+    float: right;
+    margin: 0;
+}
+
+.small-divider {
+    border: 1px dashed black;
+    display: block;
+    height: 0;
+    margin: .5rem 0 1rem 85%;
+    width: 15%;
+}
+
+.order-summary {
+    box-sizing: border-box;
+    font-weight: 700;
+    padding: 0 1rem 1rem 1rem;
+    text-align: right;
+}
+
+.order-summary p {
+    margin: .5rem 0;
+    padding: 0;
+}
+
+.shipping {
+    font-weight: 500;
+}
