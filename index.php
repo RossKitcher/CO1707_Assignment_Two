@@ -16,13 +16,15 @@
 
         <!-- Import stylesheets. -->
         <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/responsive.css">
+        <link rel="stylesheet" href="styles/homepage.css">
     </head>
     <body onresize="handleMenuResize()">
         <div class="page-container">
             <div class="content-wrap">
 
                 <?php
-                    include './includes/header.inc.php';
+                    require './includes/header.inc.php';
                 ?>
 
                 <?php
@@ -50,7 +52,7 @@
                             echo '<h1>Offers</h1>';
                             echo '<div class="offers-container">';
 
-                            include "includes/get_offers.inc.php";
+                            require "includes/get_offers.inc.php";
 
                             echo '</div>';
                         }                            
@@ -77,7 +79,7 @@
                 </div>
 
                 <?php
-                    include './includes/footer.inc.php';
+                    require './includes/footer.inc.php';
                 ?>
                 
             </div>

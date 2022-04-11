@@ -1,6 +1,6 @@
 <?php
 
-include "db_connect.inc.php"; // Connect to database.
+require "db_connect.inc.php"; // Connect to database.
 
 // Initialise SQL query.
 $sql = "select * from tbl_offers";

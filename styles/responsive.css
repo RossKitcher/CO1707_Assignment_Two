@@ -1,0 +1,368 @@
+/* =============================== File containing all media queries for every page. =============================== */
+
+/* Styles for screen sizes less than 1080px and more than 800px (laptops) */
+@media only screen and (max-width: 1080px) {
+
+    .nav-link a {
+        padding: 1rem .6rem;
+    }
+
+    .content {
+        width: 45rem;
+    }
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content h2 {
+        font-size: 1.7rem;
+    }
+
+    .item-container {
+        width: 45rem;
+    }
+
+    .item-container img {
+        width: 35rem;
+    }
+}
+
+/* Styles for screen sizes less than 800px and more than 500px (tablets, horizontal smart phone) */
+@media only screen and (max-width: 800px) {
+    
+    /* Hide primary navigation */
+    .nav-links {
+        display: none;
+    }
+
+    /* Position the burger icon */
+    .burger-icon {
+        cursor: pointer;
+        display: inline;
+        float: right;
+        margin-right: 1rem;
+        margin-top: 3rem;
+        padding: .3rem .5rem;
+        transition: .3s;
+    }
+
+    .burger-icon:hover {
+        background-color: #9e111b;
+    }
+
+    /* Display the burger icon */
+    .bar1, .bar2, .bar3 {
+        background-color: white;
+        height: .2rem;
+        margin: .3rem 0;
+        transition: .4s;     
+        width: 1.8rem;
+    }
+
+    .logo {
+        height: 120px;
+    }
+
+    .nav-header {
+        font-size: 1.5rem;
+    }
+
+    .content {
+        width: 30rem;
+    }
+
+    .content h1 {
+        font-size: 1.6rem;
+    }
+
+    .content h2 {
+        font-size: 1.4rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+        margin: .4rem 0;
+    }
+
+    .offer p {
+        margin: 0;
+        padding: 1rem;
+    }
+
+    .youtube-video {
+        height: 17rem;
+    }
+
+    .item-container {
+        width: 30rem;
+    }
+
+    .item-container img {
+        width: 25rem;
+    }
+
+    .content-wrap {
+        padding-bottom: 30rem;
+    }
+
+    .stay-bottom {
+        height: 30rem;
+    }
+
+    .review-content, .cart-content, .reviews, .orders-content {
+        width: 90%;
+    }
+    
+}
+/* Styles for screen sizes less than 500px (smartphones) */
+@media only screen and (max-width: 500px) {
+
+    .logo {
+        height: 100px;
+    }
+
+    .nav-header {
+        font-size: 1.3rem;
+    }
+
+    .burger-icon {
+        margin-top: 2.4rem;
+    }
+
+    .content {
+        width: 24rem;
+    }
+
+    .content h1 {
+        font-size: 1.3rem;
+    }
+
+    .content h2 {
+        font-size: 1.2rem;
+    }
+
+    .content p {
+        font-size: 0.9rem;
+        margin: .3rem 0;
+    }
+
+    .offer p {
+        margin: 0;
+        padding: 1rem;
+    }
+
+    .youtube-video {
+        height: 13rem;
+    }
+
+    .item-container {
+        width: 20rem;
+    }
+
+    .item-container img {
+        width: 15rem;
+    }
+
+    .item-desc h3 {
+        font-size: 1.4rem;
+    }
+    .item-desc p {
+        font-size: .8rem;
+    }
+
+    .item-desc button {
+        font-size: .9rem;
+    }
+
+    .filter-link {
+        border: 1px solid black;
+        border-left: none;
+        border-right: none;
+        margin: 0;
+        display: block;
+        width: 100%;
+    }
+
+    .products-page a:nth-child(4) {
+        margin-bottom: 1rem;
+    }
+
+    .single-info p {
+        float: none;
+    }
+
+    .small-divider {
+        margin: .5rem auto 1rem auto;
+        width: 80%;
+    }
+}
+
+/* Exact media query for when the footer flex box wraps to one child per row, ensuring the footer is always visible. */
+@media only screen and (max-width: 418px) {
+
+    .content-wrap {
+        padding-bottom: 45rem;
+    }
+    
+    .stay-bottom {
+        height: 45rem;
+    }
+}
+
+/* Styles for screen sizes less than 400px. */
+@media only screen and (max-width: 400px) {
+
+    .show .burger-link a {
+        font-size: .9rem;
+        padding: 1rem .6rem;
+    }
+
+    .burger-links {
+        padding-left: 1rem;
+    }
+
+    .logo {
+        height: 70px;
+    }
+
+    .nav-header {
+        font-size: 1.2rem;
+        margin-top: 1.5rem;
+    }
+    .burger-icon {
+        margin-top: 1rem;
+    }
+
+    .content {
+        width: 20rem;
+    }
+
+    .products-page ul {
+        font-size: .8rem;
+    }
+
+    .products-child img {
+        height: 18rem;
+        width: 18rem;
+    }
+
+    .product-desc h3 {
+        font-size: 1.5rem;
+    }
+
+    .sticky-top-button a {
+        font-size: 1rem;
+        padding: 1rem 5rem;
+    }
+
+    .item-container {
+        width: 17rem;
+    }
+
+    .cart-content h1, .orders-content h1{
+        font-size: 1.8rem;
+    }
+
+    .cart-child {
+        height: fit-content;
+    }
+
+    .cart-child img {
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+
+    .cart-desc {
+        display: block;
+    }
+
+    .price {
+        text-align: center;
+    }
+
+    .remove-button {
+        display: block;
+        min-width: 100%;
+        padding: .5rem ;
+    }
+
+    .remove-button:hover {
+        background-color: #9e111b;
+    }
+}
+
+/* Styles for screen sizes less than 340px. */
+@media only screen and (max-width: 340px) {
+
+    .logo {
+        height: 60px;
+    }
+
+    .nav-header {
+        font-size: 1rem;
+    }
+
+    .burger-icon {
+        margin-top: .85rem;
+    }
+
+    .content {
+        width: 17rem;
+    }
+
+    .youtube-video {
+        height: 10rem;
+    }
+    
+    .products-page ul {
+        font-size: .7rem;
+        padding-left: 1rem;
+    }
+
+    .products-child img {
+        width: 16rem;
+        height: 16rem;
+    }
+
+    .cart-empty p {
+        font-size: .8rem;
+    }
+    
+    .input-section {
+        padding: .5rem 1rem;
+    }
+}
+
+/* Styles for screen sizes less than 290px. */
+@media only screen and (max-width: 290px) {
+
+    .logo {
+        height: 50px;
+    }
+
+    .nav-header {
+        font-size: .9rem;
+        margin-top: 1.3rem;
+    }
+
+    .burger-icon {
+        margin-top: .5rem;
+    }
+
+    .burger-links {
+        padding-left: 1rem;
+    }
+    
+    .content {
+        width: 15rem;
+    }
+
+    .products-page ul li a{
+        padding: .5rem .8rem;
+    }
+
+    .item-container {
+        width: 15rem;
+    }
+}

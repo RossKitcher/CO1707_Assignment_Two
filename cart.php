@@ -13,6 +13,8 @@
 
         <!-- Import stylesheets. -->
         <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/responsive.css">
+        <link rel="stylesheet" href="styles/cart.css">
 
         <!-- Import kit from https://fontawesome.com/ to allow the use of symbols. -->
         <script src="https://kit.fontawesome.com/8b3dff7f8c.js" crossorigin="anonymous"></script>
@@ -23,7 +25,7 @@
             <div class="content-wrap">
 
                 <?php
-                    include './includes/header.inc.php';
+                    require './includes/header.inc.php';
                 ?>
 
                 <!-- ==================== Page Content ==================== -->
@@ -77,7 +79,7 @@
                         } else {
                             // Login form.
                             echo '<p class="strong">In order to purchase items, you must be logged in:</p>';
-                            echo '<form class="input-form" action="includes/login.inc.php" method="post">';
+                            echo '<form class="input-form" action="includes/get_login.inc.php" method="post">';
                             echo '<label for="email">Email address:</label>';
                             echo '<input type="text" id="email" name="email" placeholder="Enter email address">';
                             echo '<label for="password">Password:</label>';
@@ -129,7 +131,7 @@
                         include 'includes/get_orders.inc.php';
                     }
 
-                    include './includes/footer.inc.php';
+                    require './includes/footer.inc.php';
 
                 ?>
                 

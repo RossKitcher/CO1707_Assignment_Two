@@ -13,6 +13,8 @@
 
         <!-- Import stylesheets. -->
         <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/products.css">
+        <link rel="stylesheet" href="styles/responsive.css">
 
         <!-- Import kit from https://fontawesome.com/ to allow the use of symbols. -->
         <script src="https://kit.fontawesome.com/8b3dff7f8c.js" crossorigin="anonymous"></script>
@@ -23,7 +25,7 @@
             <div class="content-wrap">
 
                 <?php
-                    include './includes/header.inc.php';
+                    require './includes/header.inc.php';
                 ?>
 
                 <?php
@@ -113,7 +115,7 @@
                 </div>
 
                 <?php
-                    include './includes/footer.inc.php';
+                    require './includes/footer.inc.php';
                 ?>
                 
             </div>

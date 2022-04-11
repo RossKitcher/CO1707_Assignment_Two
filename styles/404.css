@@ -1,0 +1,10 @@
+
+/* ==================== 404 Styles ==================== */
+.doesnt-exist {
+    background-color: #fc7784;
+    font-weight: 700;
+    margin: 1rem auto;
+    padding: 4rem 0;
+    text-align: center;
+    width: 80%;
+}
