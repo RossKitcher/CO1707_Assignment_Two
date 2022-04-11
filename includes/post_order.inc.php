@@ -12,7 +12,7 @@ if (isset($_POST['place-order'])) {
         exit();
     }
 
-    require 'db_connect.inc.php'; // Connect to database.
+    include 'db_connect.inc.php'; // Connect to database.
 
     // Receive data from the POST request and the $_SESSION object.
     $products = $_POST['items'];

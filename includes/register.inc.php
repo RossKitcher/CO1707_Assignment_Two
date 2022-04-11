@@ -3,7 +3,7 @@
 // If a POST request has been received.
 if (isset($_POST['register-submit'])) {
 
-    require 'db_connect.inc.php'; // Connect to database.
+    include 'db_connect.inc.php'; // Connect to database.
 
     // Get data from POST request.
     $fullname = $_POST['fullName'];

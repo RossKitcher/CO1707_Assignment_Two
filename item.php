@@ -41,14 +41,14 @@
                 <div class="item-container">
 
                     <!-- item contents are displayed using includes/get_item.inc.php -->
-                    <?php require 'includes/get_item.inc.php' ?>
+                    <?php include 'includes/get_item.inc.php' ?>
 
                 </div>
 
                 <div class="reviews">
 
                     <!-- If reviews are present for the current product, display them. -->
-                    <?php $prodID = $_GET['id']; require 'includes/get_reviews.inc.php'; ?>
+                    <?php $prodID = $_GET['id']; include 'includes/get_reviews.inc.php'; ?>
                     
                 </div>
 

@@ -1,6 +1,6 @@
 <?php
 
-require 'db_connect.inc.php'; // Connect to database.
+include 'db_connect.inc.php'; // Connect to database.
 
 // Initialise the SQL statement.
 $sql = "select user_id, review_title, review_desc, review_rating from tbl_reviews where product_id = ?";
@@ -60,7 +60,7 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
             $title = $row['review_title'];
             $desc = $row['review_desc'];
 
-            require 'get_user_name.inc.php'; // Call this to get the name of the review author.
+            include 'get_user_name.inc.php'; // Call this to get the name of the review author.
 
             // HTML markup of the review, this is stored instead of being immediately echo'd as the average rating calculation needs to be complete first.
             $reviewMarkup = '<div class="review '.$ratingClass.'">

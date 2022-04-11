@@ -1,6 +1,6 @@
 <?php
 
-require 'db_connect.inc.php'; // Connect to database.
+include 'db_connect.inc.php'; // Connect to database.
 
 // Determine which SQL query to use.
 if (isset($type)) {

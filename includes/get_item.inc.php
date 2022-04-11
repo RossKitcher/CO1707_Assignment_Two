@@ -3,7 +3,7 @@
 // If the GET parameter ID is set.
 if (isset($_GET["id"])) {
 
-    require 'db_connect.inc.php'; // Connect to database.
+    include 'db_connect.inc.php'; // Connect to database.
 
     $id = $_GET["id"];
 

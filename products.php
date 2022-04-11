@@ -55,7 +55,7 @@
                                     $search = $_GET['search'];
                                 }
                             }
-                            require 'includes/get_products.inc.php';
+                            include 'includes/get_products.inc.php';
                         ?>
                         
                     </div>

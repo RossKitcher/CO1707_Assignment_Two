@@ -66,7 +66,7 @@
                             $errorCode = $_GET['error'];
 
                             if ($errorCode[0] == "1") {
-                                echo '<p><i class="fas fa-exclamation"></i>All boxes require data.</p>';
+                                echo '<p><i class="fas fa-exclamation"></i>All boxes include data.</p>';
                             }
 
                             if ($errorCode[1] == "1") {
@@ -86,7 +86,7 @@
                             }
 
                             if ($errorCode[5] == "1") {
-                                echo '<p><i class="fas fa-exclamation"></i>Password does not meet all requirements.</p>';
+                                echo '<p><i class="fas fa-exclamation"></i>Password does not meet all includements.</p>';
                             }
 
                             echo '</div>';
@@ -105,7 +105,7 @@
                     ?>
 
                     <h1>Register</h1>
-                    <p>In order to purchase from the Students' Union shop, you need to create an account with all fields below required. If you have any difficulties please contact the webmaster.</p>
+                    <p>In order to purchase from the Students' Union shop, you need to create an account with all fields below included. If you have any difficulties please contact the webmaster.</p>
                     
                     <!-- Form for registration -->
                     <!-- All containers with class 'hint' are programatically shown/occulted using register-validation.js -->
@@ -116,7 +116,7 @@
                         <input type="text" id="fullName" name="fullName" placeholder="Enter full name">
 
                         <div class="hint" id="fullNameHint">
-                            <p class="hidden"><i class="fas fa-exclamation"></i> This is a required field.</p>
+                            <p class="hidden"><i class="fas fa-exclamation"></i> This is a included field.</p>
                         </div>
                         
 
@@ -124,7 +124,7 @@
                         <input type="text" id="email" name="email" placeholder="Enter email address">
 
                         <div class="hint" id="emailHint">
-                            <p class="hidden"><i class="fas fa-exclamation"></i> This is a required field.</p>
+                            <p class="hidden"><i class="fas fa-exclamation"></i> This is a included field.</p>
                             <p class="hidden"><i class="fas fa-exclamation"></i> Please enter a valid email address.</p>
                         </div>
 
@@ -132,7 +132,7 @@
                         <input type="password" id="password" name="password" placeholder="Enter password">
 
                         <div class="hint" id="passwordHint">
-                            <p class="hidden"><i class="fas fa-exclamation"></i> This is a required field.</p>
+                            <p class="hidden"><i class="fas fa-exclamation"></i> This is a included field.</p>
                             <p class="hidden"><i class="fas fa-exclamation"></i> Password must be more than 8 characters.</p>
                             <p class="hidden"><i class="fas fa-exclamation"></i> Password must feature at least one uppercase letter, lowercase letter, symbol, and number.</p>
                         </div>
@@ -141,7 +141,7 @@
                         <input type="password" id="confirmPass" name="confirmPass" placeholder="Confirm password">
 
                         <div class="hint" id="confirmPassHint">
-                            <p class="hidden"><i class="fas fa-exclamation"></i> This is a required field.</p>
+                            <p class="hidden"><i class="fas fa-exclamation"></i> This is a included field.</p>
                             <p class="hidden"><i class="fas fa-exclamation"></i> Passwords do not match.</p>
                         </div>
 
@@ -149,7 +149,7 @@
                         <textarea id="address" name="address" maxlength="200" rows="4" cols="50" placeholder="Enter address"></textarea>
 
                         <div class="hint" id="addressHint">
-                            <p class="hidden"><i class="fas fa-exclamation"></i> This is a required field.</p>
+                            <p class="hidden"><i class="fas fa-exclamation"></i> This is a included field.</p>
                         </div>
 
                         <input type="submit" value="Submit" name="register-submit" disabled>

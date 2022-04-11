@@ -1,6 +1,6 @@
 <?php
 
-require 'db_connect.inc.php'; // Connect to database.
+include 'db_connect.inc.php'; // Connect to database.
 
 // Initialise SQL statement.
 $sql = "select order_id, order_date, product_ids from tbl_orders where user_id=?";
@@ -45,7 +45,7 @@ if (mysqli_num_rows($results) != 0) {
         foreach ($prodIDs as $id) {
 
             // Get product information such as title and price.
-            require 'get_product.inc.php';
+            include 'get_product.inc.php';
 
             $totalPrice += $prodPrice; // Update the total price.
 
