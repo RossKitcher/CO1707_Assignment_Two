@@ -8,7 +8,7 @@ $stmt = mysqli_stmt_init($conn);
 
 // Prepare SQL statement.
 if (!mysqli_stmt_prepare($stmt, $sql)) {
-    header("Location: ../cart.php?error=sql");
+    header("Location: /~RKitcher/cart.php?error=sql");
     exit();
 }
 

@@ -1,6 +1,6 @@
 <?php
 
-include 'db_connect.inc.php'; // Connect to database.
+require 'db_connect.inc.php'; // Connect to database.
 
 // Determine which SQL query to use.
 if (isset($type)) {
@@ -18,7 +18,7 @@ $stmt = mysqli_stmt_init($conn);
 
 // Prepare SQL statement.
 if (!mysqli_stmt_prepare($stmt, $sql)) {
-    header("Location: ../index.php?sqlerror=true");
+    header("Location: /~RKitcher/index.php?sqlerror=true");
     exit();
 }
 

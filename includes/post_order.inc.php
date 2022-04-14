@@ -8,7 +8,7 @@ if (isset($_POST['place-order'])) {
 
     // If the user is not logged in, return to cart.php.
     if (!isset($_SESSION['userID'])) {
-        header("Location: ../cart.php?error=nologin");
+        header("Location: /~RKitcher/cart.php?error=nologin");
         exit();
     }
 
@@ -20,7 +20,7 @@ if (isset($_POST['place-order'])) {
 
     // If the shopping cart is empty, return to cart.php.
     if (empty($products)) {
-        header("Location: ../cart.php?error=emptycart");
+        header("Location: /~RKitcher/cart.php?error=emptycart");
         exit();
     }
 
@@ -30,7 +30,7 @@ if (isset($_POST['place-order'])) {
 
     // Prepare SQL statement.
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("Location: ../cart.php?error=sql");
+        header("Location: /~RKitcher/cart.php?error=sql");
         exit();
     }
 
@@ -39,7 +39,7 @@ if (isset($_POST['place-order'])) {
     mysqli_stmt_execute($stmt);
 
     // Return to cart.php with GET variable order equals success, this will trigger order-placed.js.
-    header("Location: ../cart.php?order=success");
+    header("Location: /~RKitcher/cart.php?order=success");
     exit();
 
 }

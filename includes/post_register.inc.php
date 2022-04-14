@@ -35,7 +35,7 @@ if (isset($_POST['register-submit'])) {
     // Prepare a SQL statement for execution, will return false on failure.
     if (!mysqli_stmt_prepare($stmt, $sql)) {
 
-        header("Location: ../register.php?sqlerror=true");
+        header("Location: /~RKitcher/register.php?sqlerror=true");
         exit();
 
     } else {
@@ -79,7 +79,7 @@ if (isset($_POST['register-submit'])) {
     }
 
     // Check if the password contains a symbol.
-    if (preg_match('/[#$%^&*()+=\-\[\]\';,.\/{}|":<>?~\\\\]/', $password)) {
+    if (preg_match('/[!#$%^&*()+=\-\[\]\';,.\/{}|":<>?~\\\\]/', $password)) {
         $passChecks++;
     }
 
@@ -93,7 +93,7 @@ if (isset($_POST['register-submit'])) {
     // If any of the server-side validation found errors. 
     if ($errorCode !== "000000") {
 
-        header("Location: ../register.php?error=".$errorCode);
+        header("Location: /~RKitcher/register.php?error=".$errorCode);
         exit();
 
     } else { // If not, insert new user into database.
@@ -102,7 +102,7 @@ if (isset($_POST['register-submit'])) {
         $stmt = mysqli_stmt_init($conn);
 
         if (!mysqli_stmt_prepare($stmt, $sql)) {
-            header("Location: ../register.php?sqlerror=true");
+            header("Location: /~RKitcher/register.php?sqlerror=true");
             exit();
         } else {
 
@@ -112,7 +112,7 @@ if (isset($_POST['register-submit'])) {
             mysqli_stmt_bind_param($stmt, 'ssss', $fullname, $address, $email, $hashedPass);
             mysqli_stmt_execute($stmt);
 
-            header("Location: ../register.php?register=success");
+            header("Location: /~RKitcher/register.php?register=success");
             exit();
         }
 

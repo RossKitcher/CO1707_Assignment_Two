@@ -8,7 +8,7 @@ $stmt = mysqli_stmt_init($conn);
 
 if (!mysqli_stmt_prepare($stmt, $sql)) {
 
-    header("Location: ../index.php?error=sqlerror");
+    header("Location: /~RKitcher/index.php?sqlerror=true");
     exit();
 
 } else {

@@ -128,7 +128,7 @@
 
                     // If the user is logged in, get any pending orders.
                     if (isset($_SESSION['name'])) {
-                        include 'includes/get_orders.inc.php';
+                        require 'includes/get_orders.inc.php';
                     }
 
                     require './includes/footer.inc.php';

@@ -38,13 +38,13 @@ if (isset($_POST['review-submit'])) {
 
     // If the product id sent in POST request is invalid.
     if (empty($prodID)) {
-        header("Location: ../item.php?id=1&error=noprodid");
+        header("Location: /~RKitcher/item.php?id=1&error=noprodid");
         exit();
     }
 
     // If any of the data received is missing.
     if (empty($title) || empty($comments) || empty($userID) || $rating == -1) {
-        header("Location: ../item.php?id=".$prodID."&error=missingdata");
+        header("Location: /~RKitcher/item.php?id=".$prodID."&error=missingdata");
         exit();
     }
 
@@ -55,7 +55,7 @@ if (isset($_POST['review-submit'])) {
      // If the SQL query is invalid, quit and notify the user.
     if (!mysqli_stmt_prepare($stmt, $sql)) {
 
-        header("Location: ../item.php?id=".$prodID."&error=sql");
+        header("Location: /~RKitcher/item.php?id=".$prodID."&error=sql");
         exit();
 
     } else {
@@ -65,7 +65,7 @@ if (isset($_POST['review-submit'])) {
         mysqli_stmt_execute($stmt);
 
         // On success, let the user know.
-        header("Location: ../item.php?id=".$prodID."&posted=success");
+        header("Location: /~RKitcher/item.php?id=".$prodID."&posted=success");
         exit();
 
     }

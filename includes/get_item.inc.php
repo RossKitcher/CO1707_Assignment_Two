@@ -12,7 +12,7 @@ if (isset($_GET["id"])) {
     $stmt = mysqli_stmt_init($conn);
 
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("Location: ../index.php?sqlerror=true");
+        header("Location: /~RKitcher/index.php?sqlerror=true");
         exit();
     }
 
@@ -37,7 +37,7 @@ if (isset($_GET["id"])) {
 } else {
 
     // If no ID is provided in the URL, then redirect the user to the first product on sale.
-    header("Location: ../item.php?id=1");
+    header("Location: /~RKitcher/item.php?id=1");
     exit();
 }
 

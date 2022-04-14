@@ -11,7 +11,7 @@ if (isset($_POST['login-submit'])) {
 
     // If data is missing.
     if (empty($email) || empty($password)) {
-        header("Location: ../cart.php?error=missingdata");
+        header("Location: /~RKitcher/cart.php?error=missingdata");
         exit();
     }
 
@@ -21,7 +21,7 @@ if (isset($_POST['login-submit'])) {
 
     // If SQL error is found.
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("Location: ../index.php?sqlerror=true");
+        header("Location: /~RKitcher/index.php?sqlerror=true");
         exit();
     }
 
@@ -39,7 +39,7 @@ if (isset($_POST['login-submit'])) {
         // If the hashes differ.
         if (!$pwdCheck) {
 
-            header("Location: ../cart.php?error=wrongpwd");
+            header("Location: /~RKitcher/cart.php?error=wrongpwd");
             exit();
 
         } else if ($pwdCheck) { // If the hashes match.
@@ -49,11 +49,11 @@ if (isset($_POST['login-submit'])) {
             $_SESSION['name'] = $row[1];
             $_SESSION['userID'] = $row[0];
 
-            header("Location: ../cart.php?login=success");
+            header("Location: /~RKitcher/cart.php?login=success");
             exit();
         }        
     } else { // If no user was found with the given email.
-        header("Location: ../cart.php?error=notfound");
+        header("Location: /~RKitcher/cart.php?error=notfound");
         exit();
     }
 

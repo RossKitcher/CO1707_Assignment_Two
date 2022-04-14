@@ -87,7 +87,7 @@
                             }
 
                             if ($errorCode[5] == "1") {
-                                echo '<p><i class="fas fa-exclamation"></i>Password does not meet all includements.</p>';
+                                echo '<p><i class="fas fa-exclamation"></i>Password does not meet all requirements.</p>';
                             }
 
                             echo '</div>';
